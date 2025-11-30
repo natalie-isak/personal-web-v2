@@ -1,4 +1,4 @@
-import type { Metadata } from "../../../personal-web-v2/node_modules/next";
+import type { Metadata } from "next"
 import "./globals.css";
 
 export const metadata: Metadata = {
