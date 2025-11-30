@@ -1,6 +1,6 @@
 "use client";
 
-import Image from "../../../personal-web-v2/node_modules/next/image";
+import Image from "next/image";
 import { motion } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem, floatingAnimation } from "@/lib/animations";
 
