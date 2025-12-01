@@ -55,13 +55,13 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              My ambition led me to join Microsoft through the <a href="https://microsoftnewengland.com/maidap-2/" className="font-semibold text-terracotta">Microsoft AI Development Acceleration Program</a>, a highly selective cohort with a ~0.2% acceptance rate. This opportunity allowed me to contribute to cutting-edge AI research and development initiatives across the company.
+              My ambition led me to join Microsoft through the <a href="https://microsoftnewengland.com/maidap-2/" className="font-semibold text-terracotta">Microsoft AI Development Acceleration Program</a>. This opportunity allowed me to contribute to cutting-edge AI research and development initiatives across the company.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
               When generative AI emerged in 2022, I was invited to join an internal Responsible AI review board for all generative AI releases at Microsoft. The responsibility for assessing safety across dozens of product releases became mine—a role that fundamentally shaped my understanding of AI safety challenges.
             </motion.p>
-
+{/* 
             <motion.div
               variants={staggerItem}
               className="p-6 bg-cream/50 rounded-2xl border-l-4 border-terracotta"
@@ -69,7 +69,7 @@ export default function About() {
               <p className="text-olive italic text-lg">
                 How can we make building safe AI systems easier?
               </p>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
 
           {/* Right column - Visual element and highlights */}

@@ -4,36 +4,6 @@ import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
-const skillCategories = [
-  {
-    title: "Core Expertise",
-    skills: [
-      { name: "Responsible AI", level: 95 },
-      { name: "Large Language Models", level: 90 },
-      { name: "ML Safety & Red Teaming", level: 95 },
-      { name: "Privacy-Preserving ML", level: 85 },
-    ],
-  },
-  {
-    title: "Machine Learning",
-    skills: [
-      { name: "Computer Vision", level: 85 },
-      { name: "NLP", level: 90 },
-      { name: "Reinforcement Learning", level: 75 },
-      { name: "Multimodal Tasks", level: 80 },
-    ],
-  },
-  {
-    title: "Engineering",
-    skills: [
-      { name: "MLOps", level: 90 },
-      { name: "Scalable System Design", level: 85 },
-      { name: "Backend Engineering", level: 85 },
-      { name: "Full Stack Development", level: 80 },
-    ],
-  },
-];
-
 const tools = [
   { name: "Python", icon: "🐍" },
   { name: "C#", icon: "⚡" },
@@ -43,6 +13,65 @@ const tools = [
   { name: "Semantic Kernel", icon: "🧠" },
   { name: "Scikit-Learn", icon: "📊" },
   { name: "RAG Systems", icon: "🔍" },
+];
+
+const awards = [
+  {
+    title: "2nd Place Winner - Executive Challenge Hack",
+    event: "2023 Global Microsoft Hackathon",
+    description: "Revolutionizing Customer Security Scenarios",
+    icon: "🏆",
+  },
+  {
+    title: "Intel URP Scholar",
+    event: "Spring 2020",
+    description: "Undergraduate research scholarship recipient",
+    icon: "🎓",
+  },
+  {
+    title: "Rewriting The Code Fellow",
+    event: "2020-2021",
+    description: "Fellowship for women in technology",
+    icon: "💻",
+  },
+  {
+    title: "Lockheed Martin Corporate Award",
+    event: "Spring 2022",
+    description: "Recognition for excellence in engineering",
+    icon: "🚀",
+  },
+];
+
+const leadership = [
+  {
+    title: "Research Advisor",
+    organization: "AguaClara Project Team",
+    location: "Ithaca, NY",
+    period: "Feb 2019 – May 2022",
+    description: "Led three sub-teams (~15 people) developing an app to measure effectiveness of water purifying techniques.",
+  },
+  {
+    title: "Executive Board Member",
+    organization: "Women In Computing At Cornell",
+    location: "Ithaca, NY",
+    period: "Jan 2019 – Aug 2020",
+    description: "Organized ~8 inclusivity events per semester, including the sold-out CIS formal under budget of $7,750.",
+  },
+  {
+    title: "Head Consultant",
+    organization: "Cornell Intro to CS Class",
+    location: "Ithaca, NY",
+    period: "Jan 2019 – May 2022",
+    description: "Supervised ~60 undergraduate teaching assistants. Designed coursework and graded assignments.",
+  },
+];
+
+const volunteering = [
+  "Girls Who Code",
+  "Microsoft TEALs",
+  "Juni Learning",
+  "MIT Break Through AI",
+  "Microsoft NERD Coding Camp",
 ];
 
 export default function Expertise() {
@@ -78,7 +107,7 @@ export default function Expertise() {
           className="text-center mb-16"
         >
           <span className="text-terracotta text-sm tracking-[0.3em] uppercase font-medium">
-            Technical Proficiency
+            Skills & Recognition
           </span>
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-olive mt-4">
             Expertise
@@ -88,48 +117,12 @@ export default function Expertise() {
           </p>
         </motion.div>
 
-        {/* Skills grid
-        <motion.div
-          initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          variants={staggerContainer}
-          className="grid lg:grid-cols-3 gap-8 mb-16"
-        >
-          {skillCategories.map((category, catIndex) => (
-            <motion.div
-              key={catIndex}
-              variants={staggerItem}
-              className="p-8 bg-white rounded-3xl shadow-lg"
-            >
-              <h3 className="font-serif text-2xl text-olive mb-6">{category.title}</h3>
-              <div className="space-y-5">
-                {category.skills.map((skill, skillIndex) => (
-                  <div key={skillIndex}>
-                    <div className="flex justify-between mb-2">
-                      <span className="text-olive/80 text-sm font-medium">{skill.name}</span>
-                      <span className="text-terracotta text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="h-2 bg-sage/20 rounded-full overflow-hidden">
-                      <motion.div
-                        className="h-full bg-gradient-to-r from-terracotta to-olive rounded-full"
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                        transition={{ duration: 1, delay: catIndex * 0.2 + skillIndex * 0.1, ease: "easeOut" }}
-                      />
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </motion.div>
-          ))}
-        </motion.div> */}
-
-        {/* Tools & Languages */}
+        {/* Tools & Technologies */}
         <motion.div
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="mb-16"
+          className="mb-20"
         >
           <h3 className="font-serif text-2xl text-olive text-center mb-8">Tools & Technologies</h3>
           <div className="flex flex-wrap justify-center gap-4">
@@ -149,66 +142,96 @@ export default function Expertise() {
           </div>
         </motion.div>
 
-        {/* Highlighted capabilities */}
+        {/* Awards */}
         <motion.div
           initial="initial"
           animate={isInView ? "animate" : "initial"}
-          variants={staggerContainer}
-          className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          variants={fadeInUp}
+          className="mb-20"
         >
-          {[
-            {
-              icon: (
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                </svg>
-              ),
-              title: "AI Safety",
-              description: "End-to-end safety evaluation and red teaming for production AI systems",
-            },
-            {
-              icon: (
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 15v2m-6 4h12a2 2 0 002-2v-6a2 2 0 00-2-2H6a2 2 0 00-2 2v6a2 2 0 002 2zm10-10V7a4 4 0 00-8 0v4h8z" />
-                </svg>
-              ),
-              title: "Privacy Engineering",
-              description: "Privacy-preserving techniques for cross-compliance ML systems",
-            },
-            {
-              icon: (
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                </svg>
-              ),
-              title: "Production ML",
-              description: "Scalable ML pipelines serving millions of users",
-            },
-            {
-              icon: (
-                <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z" />
-                </svg>
-              ),
-              title: "Research",
-              description: "Novel solutions from paper to production at enterprise scale",
-            },
-          ].map((item, index) => (
-            <motion.div
-              key={index}
-              variants={staggerItem}
-              className="p-6 bg-olive text-cream rounded-2xl group"
-            >
+          <h3 className="font-serif text-2xl text-olive text-center mb-8">Awards</h3>
+          <motion.div
+            variants={staggerContainer}
+            className="grid md:grid-cols-2 lg:grid-cols-4 gap-6"
+          >
+            {awards.map((award, index) => (
               <motion.div
-                className="w-14 h-14 bg-terracotta/30 rounded-xl flex items-center justify-center mb-4 group-hover:bg-terracotta/50 transition-colors"
-                whileHover={{ rotate: 5 }}
+                key={index}
+                variants={staggerItem}
+                className="group"
               >
-                {item.icon}
+                <motion.div
+                  className="h-full p-6 bg-white rounded-2xl shadow-lg text-center"
+                  whileHover={{ y: -8, scale: 1.02 }}
+                  transition={{ duration: 0.3 }}
+                >
+                  <div className="text-4xl mb-4">{award.icon}</div>
+                  <h4 className="font-serif text-lg text-olive mb-2 group-hover:text-terracotta transition-colors">
+                    {award.title}
+                  </h4>
+                  <p className="text-terracotta text-sm font-medium mb-2">{award.event}</p>
+                  <p className="text-olive/60 text-sm">{award.description}</p>
+                </motion.div>
               </motion.div>
-              <h4 className="font-serif text-xl mb-2">{item.title}</h4>
-              <p className="text-cream/70 text-sm">{item.description}</p>
-            </motion.div>
-          ))}
+            ))}
+          </motion.div>
+        </motion.div>
+
+        {/* Leadership */}
+        <motion.div
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          variants={fadeInUp}
+          className="mb-20"
+        >
+          <h3 className="font-serif text-2xl text-olive text-center mb-8">Leadership</h3>
+          <div className="grid lg:grid-cols-3 gap-6">
+            {leadership.map((role, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
+                transition={{ delay: index * 0.15 }}
+                className="p-6 bg-olive text-cream rounded-2xl relative overflow-hidden group"
+              >
+                {/* Decorative corner */}
+                <div className="absolute top-0 right-0 w-20 h-20 bg-terracotta/20 rounded-bl-full" />
+                
+                <div className="relative z-10">
+                  <span className="text-terracotta text-xs tracking-wider uppercase">{role.period}</span>
+                  <h4 className="font-serif text-lg mt-2 mb-1 group-hover:text-terracotta transition-colors">
+                    {role.title}
+                  </h4>
+                  <p className="text-cream/80 font-medium text-sm mb-1">{role.organization}</p>
+                  <p className="text-cream/50 text-xs mb-3">{role.location}</p>
+                  <p className="text-cream/70 text-sm leading-relaxed">{role.description}</p>
+                </div>
+              </motion.div>
+            ))}
+          </div>
+        </motion.div>
+
+        {/* Volunteering & Teaching */}
+        <motion.div
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          variants={fadeInUp}
+        >
+          <h3 className="font-serif text-2xl text-olive text-center mb-8">Volunteering & Teaching</h3>
+          <div className="flex flex-wrap justify-center gap-4">
+            {volunteering.map((org, index) => (
+              <motion.div
+                key={index}
+                className="px-6 py-3 bg-tan/50 rounded-full shadow-md"
+                whileHover={{ scale: 1.05, y: -2 }}
+                initial={{ opacity: 0, scale: 0.9 }}
+                animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.9 }}
+                transition={{ delay: index * 0.1 }}
+              >
+                <span className="text-olive font-medium">{org}</span>
+              </motion.div>
+            ))}
+          </div>
         </motion.div>
       </div>
 

@@ -39,7 +39,7 @@ export default function Introduction() {
       </div>
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20 min-h-screen flex items-center">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center w-full">
+        <div className="grid lg:grid-cols-2 gap-16 md:gap-20 lg:gap-20 items-center w-full">
           {/* Text Content */}
           <motion.div
             variants={staggerContainer}
@@ -66,7 +66,7 @@ export default function Introduction() {
               variants={staggerItem}
               className="text-xl md:text-2xl text-olive/80 leading-relaxed mb-8 max-w-xl"
             >
-              Pioneering responsible AI development at Microsoft, with a focus on{" "}
+              Pioneering responsible AI development, with a focus on{" "}
               <span className="text-terracotta font-medium">AI safety</span>,{" "}
               <span className="text-terracotta font-medium">privacy-preserving systems</span>, and{" "}
               <span className="text-terracotta font-medium">trustworthy machine learning</span>.
@@ -114,32 +114,32 @@ export default function Introduction() {
             </motion.div>
           </motion.div>
 
-          {/* Photo Placeholder */}
+          {/* Photo */}
           <motion.div
             variants={fadeInUp}
             initial="initial"
             animate="animate"
-            className="order-1 lg:order-2 flex justify-center lg:justify-end"
+            className="order-1 lg:order-2 flex justify-center lg:justify-end mb-8 lg:mb-0"
           >
             <div className="relative">
               {/* Decorative elements behind photo */}
               <motion.div
-                className="absolute -top-6 -left-6 w-full h-full bg-terracotta/20 rounded-[2rem]"
+                className="absolute -top-4 -left-4 md:-top-6 md:-left-6 w-full h-full bg-terracotta/20 rounded-[1.5rem] md:rounded-[2rem]"
                 animate={{
                   rotate: [0, 2, 0],
                   transition: { duration: 6, repeat: Infinity, ease: "easeInOut" },
                 }}
               />
               <motion.div
-                className="absolute -bottom-6 -right-6 w-full h-full bg-tan/40 rounded-[2rem]"
+                className="absolute -bottom-4 -right-4 md:-bottom-6 md:-right-6 w-full h-full bg-tan/40 rounded-[1.5rem] md:rounded-[2rem]"
                 animate={{
                   rotate: [0, -2, 0],
                   transition: { duration: 7, repeat: Infinity, ease: "easeInOut" },
                 }}
               />
 
-              {/* Photo container */}
-              <div className="relative w-96 h-96 md:w-[28rem] md:h-[28rem] lg:w-[36rem] lg:h-[32rem] rounded-[2rem] overflow-hidden shadow-2xl">
+              {/* Photo container - smaller on mobile, grows on larger screens */}
+              <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
                   src="/images/natalie.jpg"
                   alt="Natalie Isak"

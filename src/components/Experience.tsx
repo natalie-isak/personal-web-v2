@@ -107,9 +107,9 @@ export default function Experience() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-olive mt-4">
             Experience
           </h2>
-          <p className="text-olive/70 mt-4 max-w-2xl mx-auto text-lg">
+          {/* <p className="text-olive/70 mt-4 max-w-2xl mx-auto text-lg">
             From Cornell research labs to Microsoft's AI Safety team, building responsible AI systems at scale.
-          </p>
+          </p> */}
         </motion.div>
 
         {/* Timeline */}
@@ -207,7 +207,7 @@ export default function Experience() {
               <p className="text-terracotta font-medium">B.S. Computer Science, 2022</p>
               <p className="text-olive/70 mt-2">College of Engineering</p>
               <p className="text-olive/70">GPA: 3.70 / 4.3</p>
-              <p className="text-sm text-olive/60 mt-4">Dean's List: Fall '18, Spring '21, Fall '22, Spring '22</p>
+              <p className="text-sm text-olive/60 mt-4">Dean's List: Fall '18, Spring '21, Fall '21, Spring '22</p>
             </motion.div>
           </div>
         </motion.div>

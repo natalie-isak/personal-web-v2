@@ -4,7 +4,7 @@ import About from "@/components/About";
 import Experience from "@/components/Experience";
 import Research from "@/components/Research";
 import Expertise from "@/components/Expertise";
-import Recognition from "@/components/Recognition";
+import ForFun from "@/components/ForFun";
 import Connect, { Footer } from "@/components/Connect";
 
 export default function Home() {
@@ -16,7 +16,7 @@ export default function Home() {
       <Experience />
       <Research />
       <Expertise />
-      <Recognition />
+      <ForFun />
       <Connect />
       <Footer />
     </main>
