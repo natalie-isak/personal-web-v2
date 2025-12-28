@@ -12,7 +12,7 @@ const experiences = [
     location: "New York, NY",
     highlights: [
       "Architected and executed the first-ever AI-powered retroactive scan of M365 data, using LLM-based detection to search >90 million logs with 99.84% accuracy",
-      "Co-designed BinaryShield, a privacy-preserving technique enabling cross-compliance boundary searches (patent & publication)",
+      "Co-designed BinaryShield, a privacy-preserving technique enabling cross-compliance boundary searches (patent & peer-reviewed publication at SaTML 2026)",
       "Designed and maintained end-to-end processor for M365 data to detect AI safety risks, including Crescendo adversarial attack detector with 96.65% precision",
       "Mentored junior engineers and interns on AI safety best practices",
     ],

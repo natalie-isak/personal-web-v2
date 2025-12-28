@@ -15,6 +15,7 @@ const publications = [
   {
     type: "Publication",
     title: <a href="https://arxiv.org/abs/2509.05608">Cross-Service Threat Intelligence in LLM Services using Privacy-Preserving Fingerprints</a>,
+    venue: "SaTML '26",
     date: "September 2025",
     description: "Research paper on enabling cross-service threat detection in LLM systems while maintaining privacy.",
     icon: "paper",
@@ -314,7 +315,7 @@ export default function Research() {
                   BinaryShield: Privacy-Preserving Threat Detection
                 </h3>
                 <p className="text-cream/80 leading-relaxed mb-6">
-                  When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I architected BinaryShield—a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact.
+                  When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
                 </p>
                 <div className="flex flex-wrap gap-3">
                   <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
