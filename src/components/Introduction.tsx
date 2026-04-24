@@ -108,7 +108,7 @@ export default function Introduction() {
                 <div className="text-sm text-olive/70 mt-1">Users Impacted</div>
               </div>
               <div>
-                <div className="text-3xl font-serif text-terracotta">3+</div>
+                <div className="text-3xl font-serif text-terracotta">4+</div>
                 <div className="text-sm text-olive/70 mt-1">Years at Microsoft</div>
               </div>
             </motion.div>

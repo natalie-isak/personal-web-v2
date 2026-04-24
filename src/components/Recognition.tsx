@@ -198,7 +198,7 @@ export default function Recognition() {
         </motion.div>
 
         {/* Fun fact / Personal */}
-        <motion.div
+        {/* <motion.div
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
@@ -222,7 +222,7 @@ export default function Recognition() {
               </span>
             </div>
           </div>
-        </motion.div>
+        </motion.div> */}
       </div>
 
       {/* Wave divider */}

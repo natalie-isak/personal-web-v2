@@ -16,7 +16,7 @@ export default function Home() {
       <Experience />
       <Research />
       <Expertise />
-      <ForFun />
+      {/* <ForFun /> */}
       <Connect />
       <Footer />
     </main>

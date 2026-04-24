@@ -6,6 +6,24 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const publications = [
   {
+    type: "Conference Talk",
+    title: "Developing & Deploying AI Fingerprints for Advanced Threat Detection",
+    date: "March 2026",
+    description: (
+      <>
+        Presenting BinaryShield to audience of 1000+ including CISOs and top-level security government officials.
+        <a
+          href="https://www.youtube.com/watch?v=u7pag5p9z5o&list=PLjmt1tu85IhAiVPugOjP-7Cy0Oemi3m7z&index=9"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Watch here
+        </a>.
+      </>
+    ),
+    icon: "patent",
+  },
+  {
     type: "Patent",
     title: "Privacy-Preserving Fingerprinting for AI Threat Detection and Mitigation",
     date: "November 2025",
@@ -25,7 +43,18 @@ const publications = [
     title: "AI Risks and Mitigations",
     venue: "Women Impact Tech Conference",
     date: "September 2025",
-    description: "Keynote presentation on AI risks and practical mitigations to a conference audience of 1,200 attendees.",
+    description: (
+      <>
+        Keynote presentation on AI risks and practical mitigations to a conference audience of 1,200 attendees.
+        <a
+          href="https://vimeo.com/1120874871?share=copy"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Watch here
+        </a>.
+      </>
+    ),
     icon: "talk",
   },
   {
@@ -160,7 +189,7 @@ export default function Research() {
             <div className="text-sm text-olive/70 mt-1">Publications</div>
           </div>
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
-            <div className="text-4xl font-serif text-terracotta">+1K</div>
+            <div className="text-4xl font-serif text-terracotta">+3K</div>
             <div className="text-sm text-olive/70 mt-1">Talk Attendees</div>
           </div>
         </motion.div>
