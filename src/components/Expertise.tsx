@@ -139,7 +139,6 @@ export default function Expertise() {
                 animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
                 transition={{ delay: index * 0.05 }}
               >
-                <span className="text-lg">{tool.icon}</span>
                 <span className="text-olive font-medium">{tool.name}</span>
               </motion.div>
             ))}
