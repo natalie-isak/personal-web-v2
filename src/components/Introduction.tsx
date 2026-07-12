@@ -66,7 +66,7 @@ export default function Introduction() {
               variants={staggerItem}
               className="text-xl md:text-2xl text-olive/80 leading-relaxed mb-8 max-w-xl"
             >
-              Pioneering frontier AI safety,
+              AI safety researcher & engineer focused on frontier risks
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-4">
