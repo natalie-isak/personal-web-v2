@@ -5,14 +5,18 @@ import { motion, useInView } from "framer-motion";
 import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const tools = [
-  { name: "Python", icon: "🐍" },
-  { name: "C#", icon: "⚡" },
-  { name: "JavaScript", icon: "📜" },
-  { name: "PyTorch", icon: "🔥" },
-  { name: "Azure Services", icon: "☁️" },
-  { name: "Semantic Kernel", icon: "🧠" },
-  { name: "Scikit-Learn", icon: "📊" },
-  { name: "RAG Systems", icon: "🔍" },
+  { name: "Python" },
+  { name: "C#" },
+  { name: "JavaScript" },
+  { name: "PyTorch" },
+  { name: "scikit-learn" },
+  { name: "Reinforcement Learning" },
+  { name: "Fine-Tuning" },
+  { name: "Multi-Modal" },
+  { name: "Azure Services" },
+  { name: "Semantic Kernel" },
+  { name: "RAG Systems" },
+  { name: "MCP Servers" },
 ];
 
 const awards = [

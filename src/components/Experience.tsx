@@ -11,10 +11,14 @@ const experiences = [
     company: "Microsoft AI Safety",
     location: "New York, NY",
     highlights: [
-      "Architected and executed the first-ever AI-powered retroactive scan of M365 data, using LLM-based detection to search >90 million logs with 99.84% accuracy",
-      "Co-designed BinaryShield, a privacy-preserving technique enabling cross-compliance boundary searches (patent & peer-reviewed publication at SaTML 2026)",
-      "Designed and maintained end-to-end processor for M365 data to detect AI safety risks, including Crescendo adversarial attack detector with 96.65% precision",
-      "Mentored junior engineers and interns on AI safety best practices",
+      "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries; implemented the production architecture, co-authored the paper, and drove a patent filing.",
+      "Developed and evaluated detections for novel AI risks (agentic memory poisoning, psychosocial harms, multi-session malware campaigns, etc.) using agents, fine-tuning, and heuristics.",
+      "Architected, built, and scaled a 0-to-1 AI safety detection platform across 60+ Microsoft services, processing 26.8B log lines monthly and enabling privacy-preserving, retroactive detection across compliance boundaries.",
+      "Led the design and implementation of a “write once, run everywhere” detection framework across heterogeneous products and compliance boundaries, reducing detection-authoring time by 67% and enabling previously impossible retroactive analysis.",
+      "Architected and executed the first AI-powered scan of M365 telemetry during a live security incident, analyzing 90M+ logs across multiple regions and achieving 99.84% accuracy in offline evaluation.",
+      "Defined new observability requirements for AI capabilities across Microsoft AI’s product portfolio.",
+      "Drove the cross-company technical design and service contracts integrating AI safety detections into Microsoft Defender and Sentinel, surfacing abuse signals through established customer security and investigation workflows.",
+      "Mentored junior engineers and interns."
     ],
     featured: true,
   },
@@ -24,11 +28,13 @@ const experiences = [
     company: "Microsoft AI Development Acceleration Program",
     location: "Cambridge, MA",
     highlights: [
-      "Architected AI data entry agent with >200K MAU, improving latency by 90.72% and saving ~$300K CAD annually",
-      "Part-time lead on Microsoft's internal Responsible AI review board for companywide AI releases",
-      "Developed open-source Semantic Kernel agentic framework (awarded 3 independent patents)",
-      "Designed RAG AI Plugin for M365 Chat projected to alleviate 80% of HR support queue",
-      "Added full stack support for object detection in RAI Dashboard, released at Microsoft Build",
+      "Architected AI data entry agent with >200K MAU, improving latency by 90.72% and saving ~$300K CAD annually.",
+      "Architected backend contracts and service enhancements for tenant-level fine-tuning of enterprise agents, aligning model-customization interfaces across Copilot Studio and M365 and leading end-to-end security reviews.",
+      "PaLed technical Responsible AI reviews for dozens of product launches, translating safety risks into measurable release criteria and production mitigations.",
+      "Developed open-source Semantic Kernel agentic framework (awarded 3 independent patents).",
+      "Built a RAG-based M365 Chat plugin projected to deflect up to 80% of an HR support queue; designed end-to-end quality and Responsible AI evaluations covering retrieval and generated responses.",
+      "Added full stack support for object detection in RAI Dashboard, released at Microsoft Build.",
+      "Designed and implemented a new machine learning (ML) pipeline for a Smart News feed using AI Builder, simplifying onboarding (saving 6 weeks of development time per customer)."
     ],
     featured: true,
   },
@@ -38,7 +44,7 @@ const experiences = [
     company: "Microsoft",
     location: "Remote",
     highlights: [
-      "Implemented dynamic status feature for PSTN endpoint within Microsoft Teams",
+      "Implemented dynamic status feature for PSTN endpoint within Microsoft Teams.",
     ],
     featured: false,
   },
@@ -48,8 +54,8 @@ const experiences = [
     company: "Cornell Netlab",
     location: "Ithaca, NY",
     highlights: [
-      "Researched intermediate representations for formal verification",
-      "Composed a pretty printer for Petr4 and designed compiler from Petr4 to C",
+      "Researched intermediate representations for formal verification.",
+      "Composed a pretty printer for Petr4 and designed compiler from Petr4 to C.",
     ],
     featured: false,
   },
@@ -59,8 +65,8 @@ const experiences = [
     company: "Tesla",
     location: "Remote",
     highlights: [
-      "Designed automated ML model to predict vehicle order cancellation frequency",
-      "Created Tableau visualizations for senior engineers and director of analytics",
+      "Designed automated ML model to predict vehicle order cancellation frequency.",
+      "Created Tableau visualizations for senior engineers and director of analytics.",
     ],
     featured: false,
   },
@@ -70,8 +76,8 @@ const experiences = [
     company: "Uber",
     location: "Remote",
     highlights: [
-      "Integrated external vendor API for rider verification feature using government-issued ID",
-      "Implemented fuzzy matching library with extensive integration tests",
+      "Integrated external vendor API for rider verification feature using government-issued ID.",
+      "Implemented fuzzy matching library with extensive integration tests.",
     ],
     featured: false,
   },
@@ -204,10 +210,23 @@ export default function Experience() {
                 </svg>
               </div>
               <h4 className="font-serif text-xl text-olive mb-2">Cornell University</h4>
-              <p className="text-terracotta font-medium">B.S. Computer Science, 2022</p>
+              <p className="text-terracotta font-medium">B.S. Computer Science</p>
               <p className="text-olive/70 mt-2">College of Engineering</p>
               <p className="text-olive/70">GPA: 3.70 / 4.3</p>
               <p className="text-sm text-olive/60 mt-4">Dean's List: Fall '18, Spring '21, Fall '21, Spring '22</p>
+            </motion.div>
+            <motion.div
+              className="p-8 bg-tan/50 rounded-3xl text-center max-w-md"
+              whileHover={{ y: -5, transition: { duration: 0.3 } }}
+            >
+              <div className="w-16 h-16 mx-auto mb-4 bg-terracotta/20 rounded-2xl flex items-center justify-center">
+                <svg className="w-8 h-8 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l9-5-9-5-9 5 9 5z" />
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z" />
+                </svg>
+              </div>
+              <h4 className="font-serif text-xl text-olive mb-2">Oxford University</h4>
+              <p className="text-terracotta font-medium">MSt Applied Ethics, incoming</p>
             </motion.div>
           </div>
         </motion.div>

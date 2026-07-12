@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Natalie Isak" }],
   openGraph: {
     title: "Natalie Isak | Machine Learning Engineer & AI Safety Researcher",
-    description: "Pioneering responsible AI development, with a focus on AI safety, privacy-preserving systems, and trustworthy machine learning.",
+    description: "Pioneering frontier AI safety",
     type: "website",
     locale: "en_US",
   },

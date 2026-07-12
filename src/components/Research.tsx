@@ -6,6 +6,42 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const publications = [
   {
+    type: "Blog",
+    title: "Guarding AI memory",
+    date: "June 2026",
+    description: (
+      <>
+        Authored Microsoft Security blog post on agent memory. 
+        <a
+          href="https://www.microsoft.com/en-us/security/blog/2026/06/22/guarding-ai-memory/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Read it here
+        </a>.
+      </>
+    ),
+    icon: "paper",
+  },
+  {
+    type: "Training",
+    title: "AI Memory, Mapped",
+    date: "June 2026",
+    description: (
+      <>
+        Presented risks and mitigations of agent memory risks. 
+        <a
+          href="https://secappdev.org/2026/lectures/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Read more here
+        </a>.
+      </>
+    ),
+    icon: "talk",
+  },
+  {
     type: "Conference Talk",
     title: "Developing & Deploying AI Fingerprints for Advanced Threat Detection",
     date: "March 2026",
@@ -21,7 +57,7 @@ const publications = [
         </a>.
       </>
     ),
-    icon: "patent",
+    icon: "talk",
   },
   {
     type: "Patent",

@@ -66,10 +66,7 @@ export default function Introduction() {
               variants={staggerItem}
               className="text-xl md:text-2xl text-olive/80 leading-relaxed mb-8 max-w-xl"
             >
-              Pioneering responsible AI development, with a focus on{" "}
-              <span className="text-terracotta font-medium">AI safety</span>,{" "}
-              <span className="text-terracotta font-medium">privacy-preserving systems</span>, and{" "}
-              <span className="text-terracotta font-medium">trustworthy machine learning</span>.
+              Pioneering frontier AI safety,
             </motion.p>
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-4">
@@ -104,12 +101,12 @@ export default function Introduction() {
                 <div className="text-sm text-olive/70 mt-1">Patents</div>
               </div>
               <div>
-                <div className="text-3xl font-serif text-terracotta">200K+</div>
-                <div className="text-sm text-olive/70 mt-1">Users Impacted</div>
+                <div className="text-3xl font-serif text-terracotta">60+</div>
+                <div className="text-sm text-olive/70 mt-1">Microsoft AI Services Impacted</div>
               </div>
               <div>
-                <div className="text-3xl font-serif text-terracotta">4+</div>
-                <div className="text-sm text-olive/70 mt-1">Years at Microsoft</div>
+                <div className="text-3xl font-serif text-terracotta">5+</div>
+                <div className="text-sm text-olive/70 mt-1">Years of experience</div>
               </div>
             </motion.div>
           </motion.div>
