@@ -28,7 +28,7 @@ export default function Introduction() {
         }}
       />
 
-      {/* Background image with overlay */}
+      {/* Background image with overlay
       <div className="absolute inset-0 opacity-10">
         <div
           className="w-full h-full bg-cover bg-center"
@@ -36,7 +36,7 @@ export default function Introduction() {
             backgroundImage: `url('https://images.unsplash.com/photo-1575757371726-27b0978ee246?q=80&w=1632&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')`
           }}
         />
-      </div>
+      </div> */}
 
       <div className="relative z-10 max-w-7xl mx-auto px-6 lg:px-12 pt-32 pb-20 min-h-screen flex items-center">
         <div className="grid lg:grid-cols-2 gap-16 md:gap-20 lg:gap-20 items-center w-full">
@@ -138,7 +138,7 @@ export default function Introduction() {
               {/* Photo container - smaller on mobile, grows on larger screens */}
               <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/natalie.jpg"
+                  src="/images/1569376265769.jpeg"
                   alt="Natalie Isak"
                   fill
                   className="object-cover"
