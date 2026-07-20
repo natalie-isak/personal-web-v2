@@ -23,7 +23,7 @@ html {
 body {
   background-color: var(--cream);
   color: var(--olive);
-  font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+  font-family: Georgia, Cambria, "Times New Roman", serif;
   line-height: 1.7;
   overflow-x: hidden;
 }

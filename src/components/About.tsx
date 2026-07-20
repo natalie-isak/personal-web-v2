@@ -1,8 +1,9 @@
 "use client";
 
 import { useRef } from "react";
+import Image from "next/image";
 import { motion, useInView } from "framer-motion";
-import { fadeInUp, fadeInLeft, fadeInRight, staggerContainer, staggerItem } from "@/lib/animations";
+import { fadeInUp, fadeInLeft, staggerContainer, staggerItem } from "@/lib/animations";
 
 export default function About() {
   const ref = useRef(null);
@@ -42,86 +43,56 @@ export default function About() {
           </h2>
         </motion.div>
 
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          {/* Left column - Main narrative */}
+        <div className="grid lg:grid-cols-5 gap-16 items-start">
+          {/* Left column - Photo */}
+          <motion.div
+            initial="initial"
+            animate={isInView ? "animate" : "initial"}
+            variants={fadeInLeft}
+            className="lg:col-span-2"
+          >
+            <div className="relative rounded-3xl overflow-hidden shadow-xl">
+              <div className="aspect-[3/4] relative">
+                <Image
+                  src="/images/natalie_v1.jpg"
+                  alt="Natalie Isak"
+                  fill
+                  className="object-cover [filter:grayscale(1)_sepia(0.3)_hue-rotate(60deg)_saturate(0.6)_brightness(0.95)]"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-olive/60 via-olive/20 to-transparent" />
+              </div>
+            </div>
+            <p className="text-olive/60 text-sm mt-3 italic text-center">
+              Women Impact Tech &apos;25, Mainstage Event on AI Safety
+            </p>
+          </motion.div>
+
+          {/* Right column - Main narrative */}
           <motion.div
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             variants={staggerContainer}
-            className="space-y-6"
+            className="lg:col-span-3 space-y-6"
           >
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              I am deeply passionate about Artificial Intelligence safety and driven to make a meaningful impact in this critical field. My journey began at Cornell University, where I led a research team developing computer vision models for environmental monitoring and studied bias in information networks under Jon Kleinberg.
+              I&apos;m a Machine Learning Engineer working at the frontier of AI safety, measuring and mitigating the risks that come with increasingly capable AI systems.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              My ambition led me to join Microsoft through the <a href="https://microsoftnewengland.com/maidap-2/" className="font-semibold text-terracotta">Microsoft AI Development Acceleration Program</a>. This opportunity allowed me to contribute to cutting-edge AI research and development initiatives across the company.
+              With 5+ years of hands-on expertise across product and research, I do my best work iterating quickly on the edge. My current focus is AI safety and security: detecting the full spectrum of novel AI risks, from agentic memory poisoning to psychosocial risk factors to AI-assisted cyber uplift.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              When generative AI emerged in 2022, I was invited to join an internal Responsible AI review board for all generative AI releases at Microsoft. The responsibility for assessing safety across dozens of product releases became mine, a role that fundamentally shaped my understanding of AI safety challenges. Today, my work centers on developing monitoring systems and mitigation strategies for emerging AI risks, with an emphasis on privacy-preserving and compliant approaches.
+              I&apos;m a published author and patent holder several times over in the AI safety space, with a research background spanning both academia and industry, including an incoming MSt in Applied Ethics at Oxford University. I&apos;m energized by translating frontier research into practical safeguards that help teams ship AI responsibly, and have presented my work at leading venues including SaTML, Women Impact Tech NYC, and [un]prompted.
             </motion.p>
-{/* 
-            <motion.div
-              variants={staggerItem}
-              className="p-6 bg-cream/50 rounded-2xl border-l-4 border-terracotta"
-            >
-              <p className="text-olive italic text-lg">
-                How can we make building safe AI systems easier?
-              </p>
-            </motion.div> */}
-          </motion.div>
 
-          {/* Right column - Visual element and highlights */}
-          <motion.div
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            variants={fadeInRight}
-          >
-            {/* Background image card */}
-            <div className="relative rounded-3xl overflow-hidden mb-8 shadow-xl">
-              <div className="aspect-[4/3] relative">
-                <img
-                  src="https://images.unsplash.com/photo-1628258334105-2a0b3d6efee1?q=80&w=774&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                  className="w-full h-full object-cover"
-                />
-                <div className="absolute inset-0 bg-gradient-to-t from-olive/60 via-olive/20 to-transparent" />
-                <div className="absolute bottom-6 left-6 right-6">
-                  {/* <p className="text-cream text-xl font-serif">
-                    Bridging the gap from research to production
-                  </p> */}
-                </div>
-              </div>
-            </div>
+            <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
+              I&apos;m also a part-time lead for Microsoft&apos;s company-wide compliance process for Responsible AI in generative AI, where I lead critical efforts in RAI policy implementation, including architecture reviews, harm analyses, red-teaming, and documentation reviews.
+            </motion.p>
 
-            {/* Highlight cards */}
-            <div className="grid grid-cols-2 gap-4">
-              <motion.div
-                className="p-6 bg-cream rounded-2xl shadow-lg"
-                whileHover={{ y: -5, transition: { duration: 0.3 } }}
-              >
-                <div className="w-12 h-12 bg-terracotta/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M9 12l2 2 4-4m5.618-4.016A11.955 11.955 0 0112 2.944a11.955 11.955 0 01-8.618 3.04A12.02 12.02 0 003 9c0 5.591 3.824 10.29 9 11.622 5.176-1.332 9-6.03 9-11.622 0-1.042-.133-2.052-.382-3.016z" />
-                  </svg>
-                </div>
-                <h3 className="font-serif text-xl text-olive mb-2">Safety First</h3>
-                <p className="text-olive/70 text-sm">Designing mitigations before risks manifest</p>
-              </motion.div>
-
-              <motion.div
-                className="p-6 bg-cream rounded-2xl shadow-lg"
-                whileHover={{ y: -5, transition: { duration: 0.3 } }}
-              >
-                <div className="w-12 h-12 bg-terracotta/20 rounded-xl flex items-center justify-center mb-4">
-                  <svg className="w-6 h-6 text-terracotta" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                </div>
-                <h3 className="font-serif text-xl text-olive mb-2">Research x Product</h3>
-                <p className="text-olive/70 text-sm">Identifying novel challenges at scale</p>
-              </motion.div>
-            </div>
+            <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
+              I&apos;m deeply committed to sharing knowledge and fostering inclusivity in tech. Through initiatives like Girls Who Code and Microsoft TEALs, I mentor women and other underrepresented groups in computer science and AI.
+            </motion.p>
           </motion.div>
         </div>
 
@@ -130,28 +101,13 @@ export default function About() {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="mt-16 w-full"
+          className="mt-16 max-w-2xl mx-auto"
         >
-          <div className="w-full grid md:grid-cols-2 gap-8">
-            {/* <div className="p-8 bg-cream/70 rounded-3xl shadow-lg">
-              <h3 className="font-serif text-2xl text-olive mb-4">Current Focus</h3>
-              <p className="text-olive/80">
-                Designing safety detections for frontier AI risks
-              </p>
-            </div> */}
-            <div className="p-8 bg-olive text-cream rounded-3xl shadow-lg">
-              <h3 className="font-serif text-2xl mb-4">Top of Mind</h3>
-              <ul className="space-y-3 text-cream/90">
-                <li className="flex items-start gap-2">
-                  <span className="text-terracotta mt-1">→</span>
-                  Understanding and measuring emergent risks without compromising user privacy
-                </li>
-                <li className="flex items-start gap-2">
-                  <span className="text-terracotta mt-1">→</span>
-                  Detecting harmful content (e.g. cross prompt injections) in multimodal inputs and outputs
-                </li>
-              </ul>
-            </div>
+          <div className="p-8 bg-olive text-cream rounded-3xl shadow-lg">
+            <h3 className="font-serif text-2xl mb-4">Where It Started</h3>
+            <p className="text-cream/90 leading-relaxed">
+              My path started in computer-vision research at Cornell, then took me into Microsoft&apos;s AI Development Acceleration Program. When generative AI took off in 2022, I became one of the first leads on Microsoft&apos;s internal Responsible AI review process, running architecture reviews, harm analyses, and red-teaming across global product launches. That work taught me that spotting a harmful output is easy; tracing it back through the research, architecture, and product decisions that produced it is not &mdash; and that gap is what pulled me toward anticipating and mitigating novel AI risks.
+            </p>
           </div>
         </motion.div>
       </div>

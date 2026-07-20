@@ -101,7 +101,7 @@ export default function Introduction() {
                 <div className="text-sm text-olive/70 mt-1">Patents</div>
               </div>
               <div>
-                <div className="text-3xl font-serif text-terracotta">60+</div>
+                <div className="text-3xl font-serif text-terracotta">70+</div>
                 <div className="text-sm text-olive/70 mt-1">Microsoft AI Services Impacted</div>
               </div>
               <div>

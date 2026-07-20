@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { fadeInUp, fadeInLeft, staggerContainer, staggerItem } from "@/lib/animations";
+import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const experiences = [
   {
@@ -11,13 +11,13 @@ const experiences = [
     company: "Microsoft AI Safety",
     location: "New York, NY",
     highlights: [
-      "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries; implemented the production architecture, co-authored the paper, and drove a patent filing.",
-      "Developed and evaluated detections for novel AI risks (agentic memory poisoning, psychosocial harms, multi-session malware campaigns, etc.) using agents, fine-tuning, and heuristics.",
-      "Architected, built, and scaled a 0-to-1 AI safety detection platform across 60+ Microsoft services, processing 26.8B log lines monthly and enabling privacy-preserving, retroactive detection across compliance boundaries.",
-      "Led the design and implementation of a “write once, run everywhere” detection framework across heterogeneous products and compliance boundaries, reducing detection-authoring time by 67% and enabling previously impossible retroactive analysis.",
-      "Architected and executed the first AI-powered scan of M365 telemetry during a live security incident, analyzing 90M+ logs across multiple regions and achieving 99.84% accuracy in offline evaluation.",
+      "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries; co-authored the paper and drove a patent filing.",
+      "Built detections for novel AI risks—agentic memory poisoning, psychosocial harms, multi-session malware campaigns—using agents, fine-tuning, and heuristics.",
+      "Architected and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly.",
+      "Led a “write once, run everywhere” detection framework across compliance boundaries, cutting detection-authoring time by 67%.",
+      "Led the first AI-powered scan of M365 telemetry during a live security incident, analyzing 90M+ logs with 99.84% offline accuracy.",
       "Defined new observability requirements for AI capabilities across Microsoft AI’s product portfolio.",
-      "Drove the cross-company technical design and service contracts integrating AI safety detections into Microsoft Defender and Sentinel, surfacing abuse signals through established customer security and investigation workflows.",
+      "Drove the cross-company design integrating AI safety detections into Microsoft Defender and Sentinel.",
       "Mentored junior engineers and interns."
     ],
     featured: true,
@@ -28,15 +28,15 @@ const experiences = [
     company: "Microsoft AI Development Acceleration Program",
     location: "Cambridge, MA",
     highlights: [
-      "Architected AI data entry agent with >200K MAU, improving latency by 90.72% and saving ~$300K CAD annually.",
-      "Architected backend contracts and service enhancements for tenant-level fine-tuning of enterprise agents, aligning model-customization interfaces across Copilot Studio and M365 and leading end-to-end security reviews.",
-      "PaLed technical Responsible AI reviews for dozens of product launches, translating safety risks into measurable release criteria and production mitigations.",
-      "Developed open-source Semantic Kernel agentic framework (awarded 3 independent patents).",
-      "Built a RAG-based M365 Chat plugin projected to deflect up to 80% of an HR support queue; designed end-to-end quality and Responsible AI evaluations covering retrieval and generated responses.",
-      "Added full stack support for object detection in RAI Dashboard, released at Microsoft Build.",
-      "Designed and implemented a new machine learning (ML) pipeline for a Smart News feed using AI Builder, simplifying onboarding (saving 6 weeks of development time per customer)."
+      "Architected an AI data entry agent with >200K MAU, improving latency by 90.72% and saving ~$300K CAD annually.",
+      "Architected backend contracts for tenant-level fine-tuning of enterprise agents, aligning interfaces across Copilot Studio and M365 and leading end-to-end security reviews.",
+      "Led technical Responsible AI reviews for dozens of product launches, translating safety risks into measurable release criteria.",
+      "Developed the open-source Semantic Kernel agentic framework (3 independent patents).",
+      "Built a RAG-based M365 Chat plugin projected to deflect up to 80% of an HR support queue, with end-to-end Responsible AI evaluations.",
+      "Added full-stack object detection support to the RAI Dashboard, released at Microsoft Build.",
+      "Built a new ML pipeline for a Smart News feed using AI Builder, saving 6 weeks of onboarding time per customer."
     ],
-    featured: true,
+    featured: false,
   },
   {
     period: "Jun 2021 – Aug 2021",
@@ -119,76 +119,62 @@ export default function Experience() {
         </motion.div>
 
         {/* Timeline */}
-        <div className="relative">
-          {/* Vertical line */}
-          <div className="absolute left-0 md:left-1/2 top-0 bottom-0 w-px bg-gradient-to-b from-sage/50 via-terracotta/50 to-sage/50 transform md:-translate-x-1/2" />
+        <motion.div
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          variants={staggerContainer}
+          className="grid md:grid-cols-2 gap-6 md:gap-8 items-start"
+        >
+          {[0, 1].map((col) => (
+            <div key={col} className="flex flex-col gap-6 md:gap-8">
+              {experiences
+                .filter((_, index) => index % 2 === col)
+                .map((exp) => (
+                  <motion.div key={exp.period} variants={staggerItem}>
+                    <motion.div
+                      className={`p-8 rounded-3xl shadow-lg transition-all duration-300 ${
+                        exp.featured
+                          ? "bg-gradient-to-br from-olive to-olive/90 text-cream"
+                          : "bg-white hover:shadow-xl"
+                      }`}
+                      whileHover={{ y: -5 }}
+                    >
+                      {/* Period badge */}
+                      <div className={`inline-block px-4 py-1 rounded-full text-xs tracking-wider mb-4 ${
+                        exp.featured ? "bg-terracotta/30 text-cream" : "bg-tan text-olive"
+                      }`}>
+                        {exp.period}
+                      </div>
 
-          <motion.div
-            initial="initial"
-            animate={isInView ? "animate" : "initial"}
-            variants={staggerContainer}
-            className="space-y-12"
-          >
-            {experiences.map((exp, index) => (
-              <motion.div
-                key={index}
-                variants={staggerItem}
-                className={`relative flex flex-col md:flex-row gap-8 ${
-                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
-                }`}
-              >
-                {/* Timeline dot */}
-                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-terracotta rounded-full transform -translate-x-1/2 mt-2 z-10 ring-4 ring-cream" />
+                      <h3 className={`text-xl font-serif mb-1 ${exp.featured ? "text-cream" : "text-olive"}`}>
+                        {exp.title}
+                      </h3>
+                      <p className="text-lg font-medium mb-1 text-terracotta">
+                        {exp.company}
+                      </p>
+                      <p className={`text-sm mb-4 ${exp.featured ? "text-cream/70" : "text-olive/60"}`}>
+                        {exp.location}
+                      </p>
 
-                {/* Content */}
-                <div className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
-                  <motion.div
-                    className={`p-8 rounded-3xl shadow-lg transition-all duration-300 ${
-                      exp.featured
-                        ? "bg-gradient-to-br from-olive to-olive/90 text-cream"
-                        : "bg-white hover:shadow-xl"
-                    }`}
-                    whileHover={{ y: -5 }}
-                  >
-                    {/* Period badge */}
-                    <div className={`inline-block px-4 py-1 rounded-full text-xs tracking-wider mb-4 ${
-                      exp.featured ? "bg-terracotta/30 text-cream" : "bg-tan text-olive"
-                    }`}>
-                      {exp.period}
-                    </div>
-
-                    <h3 className={`text-xl font-serif mb-1 ${exp.featured ? "text-cream" : "text-olive"}`}>
-                      {exp.title}
-                    </h3>
-                    <p className={`text-lg font-medium mb-1 ${exp.featured ? "text-terracotta" : "text-terracotta"}`}>
-                      {exp.company}
-                    </p>
-                    <p className={`text-sm mb-4 ${exp.featured ? "text-cream/70" : "text-olive/60"}`}>
-                      {exp.location}
-                    </p>
-
-                    <ul className={`space-y-2 ${index % 2 === 0 ? "md:text-right" : "text-left"}`}>
-                      {exp.highlights.map((highlight, hIndex) => (
-                        <li
-                          key={hIndex}
-                          className={`text-sm leading-relaxed flex items-start gap-2 ${
-                            index % 2 === 0 ? "md:flex-row-reverse" : ""
-                          } ${exp.featured ? "text-cream/90" : "text-olive/80"}`}
-                        >
-                          <span className="text-terracotta mt-1 flex-shrink-0">•</span>
-                          <span>{highlight}</span>
-                        </li>
-                      ))}
-                    </ul>
+                      <ul className="space-y-2">
+                        {exp.highlights.map((highlight, hIndex) => (
+                          <li
+                            key={hIndex}
+                            className={`text-sm leading-relaxed flex items-start gap-2 ${
+                              exp.featured ? "text-cream/90" : "text-olive/80"
+                            }`}
+                          >
+                            <span className="text-terracotta mt-1 flex-shrink-0">•</span>
+                            <span>{highlight}</span>
+                          </li>
+                        ))}
+                      </ul>
+                    </motion.div>
                   </motion.div>
-                </div>
-
-                {/* Spacer for alignment */}
-                <div className="hidden md:block flex-1" />
-              </motion.div>
-            ))}
-          </motion.div>
-        </div>
+                ))}
+            </div>
+          ))}
+        </motion.div>
 
         {/* Education */}
         <motion.div
@@ -226,7 +212,8 @@ export default function Experience() {
                 </svg>
               </div>
               <h4 className="font-serif text-xl text-olive mb-2">Oxford University</h4>
-              <p className="text-terracotta font-medium">MSt Applied Ethics, incoming</p>
+              <p className="text-terracotta font-medium">MSt Applied Ethics</p>
+              <p className="text-olive/70 mt-2">Incoming</p>
             </motion.div>
           </div>
         </motion.div>
