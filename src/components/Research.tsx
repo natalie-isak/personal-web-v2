@@ -371,7 +371,7 @@ export default function Research() {
               />
             </div>
 
-            <div className="relative z-10 max-w-3xl">
+            <div className="relative z-10 max-w-3xl mx-auto">
               <span className="text-terracotta text-sm tracking-[0.2em] uppercase font-medium">
                 Featured Work
               </span>

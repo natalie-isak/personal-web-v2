@@ -57,11 +57,14 @@ export default function About() {
                   src="/images/natalie_v1.jpg"
                   alt="Natalie Isak"
                   fill
-                  className="object-cover grayscale"
+                  className="object-cover [filter:grayscale(1)_sepia(0.3)_hue-rotate(60deg)_saturate(0.6)_brightness(0.95)]"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-olive/60 via-olive/20 to-transparent" />
               </div>
             </div>
+            <p className="text-olive/60 text-sm mt-3 italic text-center">
+              Women Impact Tech &apos;25, Mainstage Event on AI Safety
+            </p>
           </motion.div>
 
           {/* Right column - Main narrative */}

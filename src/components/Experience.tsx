@@ -13,7 +13,7 @@ const experiences = [
     highlights: [
       "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries; co-authored the paper and drove a patent filing.",
       "Built detections for novel AI risks—agentic memory poisoning, psychosocial harms, multi-session malware campaigns—using agents, fine-tuning, and heuristics.",
-      "Architected and scaled a 0-to-1 AI safety detection platform across 60+ Microsoft services, processing 26.8B log lines monthly.",
+      "Architected and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly.",
       "Led a “write once, run everywhere” detection framework across compliance boundaries, cutting detection-authoring time by 67%.",
       "Led the first AI-powered scan of M365 telemetry during a live security incident, analyzing 90M+ logs with 99.84% offline accuracy.",
       "Defined new observability requirements for AI capabilities across Microsoft AI’s product portfolio.",
@@ -226,7 +226,8 @@ export default function Experience() {
                 </svg>
               </div>
               <h4 className="font-serif text-xl text-olive mb-2">Oxford University</h4>
-              <p className="text-terracotta font-medium">MSt Applied Ethics, incoming</p>
+              <p className="text-terracotta font-medium">MSt Applied Ethics</p>
+              <p className="text-olive/70 mt-2">Incoming</p>
             </motion.div>
           </div>
         </motion.div>
