@@ -134,7 +134,7 @@ export default function FullStackAISafety() {
             Pragmatic Innovation
           </h3>
           <p className="font-serif italic text-terracotta text-lg md:text-xl lg:text-2xl mt-4 leading-snug">
-            across policy, research, engineering, and adversarial testing
+            "full stack" AI safety
           </p>
         </div>
 
