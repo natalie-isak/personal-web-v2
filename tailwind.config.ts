@@ -17,7 +17,7 @@ const config: Config = {
       },
       fontFamily: {
         serif: ["Georgia", "Cambria", "Times New Roman", "serif"],
-        sans: ["system-ui", "-apple-system", "Segoe UI", "Roboto", "sans-serif"],
+        sans: ["Georgia", "Cambria", "Times New Roman", "serif"],
       },
       animation: {
         "float": "float 6s ease-in-out infinite",

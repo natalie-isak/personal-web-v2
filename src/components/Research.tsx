@@ -371,38 +371,26 @@ export default function Research() {
               />
             </div>
 
-            <div className="relative z-10 grid lg:grid-cols-2 gap-8 items-center">
-              <div>
-                <span className="text-terracotta text-sm tracking-[0.2em] uppercase font-medium">
-                  Featured Work
+            <div className="relative z-10 max-w-3xl">
+              <span className="text-terracotta text-sm tracking-[0.2em] uppercase font-medium">
+                Featured Work
+              </span>
+              <h3 className="text-3xl lg:text-4xl font-serif text-cream mt-4 mb-6">
+                BinaryShield: Privacy-Preserving Threat Detection
+              </h3>
+              <p className="text-cream/80 leading-relaxed mb-6">
+                When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Privacy-Preserving
                 </span>
-                <h3 className="text-3xl lg:text-4xl font-serif text-cream mt-4 mb-6">
-                  BinaryShield: Privacy-Preserving Threat Detection
-                </h3>
-                <p className="text-cream/80 leading-relaxed mb-6">
-                  When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
-                </p>
-                <div className="flex flex-wrap gap-3">
-                  <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                    Privacy-Preserving
-                  </span>
-                  <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                    Threat Detection
-                  </span>
-                  <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                    Cross-Compliance
-                  </span>
-                </div>
-              </div>
-              <div className="relative">
-                <div className="aspect-square rounded-2xl overflow-hidden">
-                  <img
-                    src="https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&q=80"
-                    alt="Digital security visualization"
-                    className="w-full h-full object-cover opacity-80"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-tr from-olive/60 to-transparent" />
-                </div>
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Threat Detection
+                </span>
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Cross-Compliance
+                </span>
               </div>
             </div>
           </div>

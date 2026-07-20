@@ -11,14 +11,12 @@ const funActivities = [
     description: "Completed Philly in '24",
     image: "/images/marathon.jpg",
     rotation: -3,
-    emoji: "🏃‍♀️",
   },
   {
     title: "Recent Travels: Iceland",
     // description: "Sisterhood & community",
     image: "/images/natalie_v0.jpg",
     rotation: 2,
-    // emoji: "💛",
   },
   {
     title: "Recently Enjoyed: The Candy House",
@@ -26,7 +24,6 @@ const funActivities = [
     link: "https://www.goodreads.com/book/show/58437521-the-candy-house",
     image: "/images/book.jpg",
     rotation: -1,
-    emoji: "📚",
   },
 ];
 
