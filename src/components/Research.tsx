@@ -214,7 +214,7 @@ export default function Research() {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="grid grid-cols-3 gap-8 max-w-2xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto mb-16"
         >
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
             <div className="text-4xl font-serif text-terracotta">4</div>
