@@ -127,74 +127,65 @@ export default function Experience() {
             initial="initial"
             animate={isInView ? "animate" : "initial"}
             variants={staggerContainer}
-            className="grid md:grid-cols-2 items-start"
+            className="space-y-16 md:space-y-28"
           >
-            {[0, 1].map((col) => (
-              <div
-                key={col}
-                className={`flex flex-col gap-16 md:gap-24 ${
-                  col === 0 ? "md:items-end md:pr-16" : "md:items-start md:pl-16"
+            {experiences.map((exp, index) => (
+              <motion.div
+                key={index}
+                variants={staggerItem}
+                className={`relative flex flex-col md:flex-row gap-8 ${
+                  index % 2 === 0 ? "md:flex-row" : "md:flex-row-reverse"
                 }`}
               >
-                {experiences
-                  .filter((_, index) => index % 2 === col)
-                  .map((exp) => (
-                    <motion.div
-                      key={exp.period}
-                      variants={staggerItem}
-                      className="relative w-full pl-8 md:pl-0"
-                    >
-                      {/* Timeline dot */}
-                      <div
-                        className={`absolute top-2 left-0 -translate-x-1/2 w-4 h-4 bg-terracotta rounded-full z-10 ring-4 ring-cream ${
-                          col === 0
-                            ? "md:left-auto md:right-0 md:translate-x-1/2"
-                            : "md:left-0 md:-translate-x-1/2"
-                        }`}
-                      />
+                {/* Timeline dot */}
+                <div className="absolute left-0 md:left-1/2 w-4 h-4 bg-terracotta rounded-full transform -translate-x-1/2 mt-2 z-10 ring-4 ring-cream" />
 
-                      <motion.div
-                        className={`p-8 rounded-3xl shadow-lg transition-all duration-300 ${
-                          exp.featured
-                            ? "bg-gradient-to-br from-olive to-olive/90 text-cream"
-                            : "bg-white hover:shadow-xl"
-                        }`}
-                        whileHover={{ y: -5 }}
-                      >
-                        {/* Period badge */}
-                        <div className={`inline-block px-4 py-1 rounded-full text-xs tracking-wider mb-4 ${
-                          exp.featured ? "bg-terracotta/30 text-cream" : "bg-tan text-olive"
-                        }`}>
-                          {exp.period}
-                        </div>
+                {/* Content */}
+                <div className={`flex-1 pl-8 md:pl-0 ${index % 2 === 0 ? "md:pr-16 md:text-right" : "md:pl-16"}`}>
+                  <motion.div
+                    className={`p-8 rounded-3xl shadow-lg transition-all duration-300 ${
+                      exp.featured
+                        ? "bg-gradient-to-br from-olive to-olive/90 text-cream"
+                        : "bg-white hover:shadow-xl"
+                    }`}
+                    whileHover={{ y: -5 }}
+                  >
+                    {/* Period badge */}
+                    <div className={`inline-block px-4 py-1 rounded-full text-xs tracking-wider mb-4 ${
+                      exp.featured ? "bg-terracotta/30 text-cream" : "bg-tan text-olive"
+                    }`}>
+                      {exp.period}
+                    </div>
 
-                        <h3 className={`text-xl font-serif mb-1 ${exp.featured ? "text-cream" : "text-olive"}`}>
-                          {exp.title}
-                        </h3>
-                        <p className="text-lg font-medium mb-1 text-terracotta">
-                          {exp.company}
-                        </p>
-                        <p className={`text-sm mb-4 ${exp.featured ? "text-cream/70" : "text-olive/60"}`}>
-                          {exp.location}
-                        </p>
+                    <h3 className={`text-xl font-serif mb-1 ${exp.featured ? "text-cream" : "text-olive"}`}>
+                      {exp.title}
+                    </h3>
+                    <p className="text-lg font-medium mb-1 text-terracotta">
+                      {exp.company}
+                    </p>
+                    <p className={`text-sm mb-4 ${exp.featured ? "text-cream/70" : "text-olive/60"}`}>
+                      {exp.location}
+                    </p>
 
-                        <ul className={`space-y-2 ${col === 0 ? "md:text-right" : "text-left"}`}>
-                          {exp.highlights.map((highlight, hIndex) => (
-                            <li
-                              key={hIndex}
-                              className={`text-sm leading-relaxed flex items-start gap-2 ${
-                                col === 0 ? "md:flex-row-reverse" : ""
-                              } ${exp.featured ? "text-cream/90" : "text-olive/80"}`}
-                            >
-                              <span className="text-terracotta mt-1 flex-shrink-0">•</span>
-                              <span>{highlight}</span>
-                            </li>
-                          ))}
-                        </ul>
-                      </motion.div>
-                    </motion.div>
-                  ))}
-              </div>
+                    <ul className={`space-y-2 ${index % 2 === 0 ? "md:text-right" : "text-left"}`}>
+                      {exp.highlights.map((highlight, hIndex) => (
+                        <li
+                          key={hIndex}
+                          className={`text-sm leading-relaxed flex items-start gap-2 ${
+                            index % 2 === 0 ? "md:flex-row-reverse" : ""
+                          } ${exp.featured ? "text-cream/90" : "text-olive/80"}`}
+                        >
+                          <span className="text-terracotta mt-1 flex-shrink-0">•</span>
+                          <span>{highlight}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </motion.div>
+                </div>
+
+                {/* Spacer for alignment */}
+                <div className="hidden md:block flex-1" />
+              </motion.div>
             ))}
           </motion.div>
         </div>
