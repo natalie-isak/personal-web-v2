@@ -4,6 +4,7 @@ import { useRef } from "react";
 import Image from "next/image";
 import { motion, useInView } from "framer-motion";
 import { fadeInUp, fadeInLeft, staggerContainer, staggerItem } from "@/lib/animations";
+import FullStackAISafety from "./FullStackAISafety";
 
 export default function About() {
   const ref = useRef(null);
@@ -110,6 +111,9 @@ export default function About() {
             </p>
           </div>
         </motion.div>
+
+        {/* Full-Stack AI Safety figure */}
+        <FullStackAISafety />
       </div>
 
       {/* Wave divider */}
