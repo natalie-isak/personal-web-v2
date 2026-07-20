@@ -36,7 +36,7 @@ const experiences = [
       "Added full-stack object detection support to the RAI Dashboard, released at Microsoft Build.",
       "Built a new ML pipeline for a Smart News feed using AI Builder, saving 6 weeks of onboarding time per customer."
     ],
-    featured: true,
+    featured: false,
   },
   {
     period: "Jun 2021 – Aug 2021",

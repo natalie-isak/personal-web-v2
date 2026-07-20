@@ -104,17 +104,10 @@ export default function About() {
           className="mt-16 max-w-2xl mx-auto"
         >
           <div className="p-8 bg-olive text-cream rounded-3xl shadow-lg">
-            <h3 className="font-serif text-2xl mb-4">Top of Mind</h3>
-            <ul className="space-y-3 text-cream/90">
-              <li className="flex items-start gap-2">
-                <span className="text-terracotta mt-1">→</span>
-                Understanding and measuring emergent risks without compromising user privacy
-              </li>
-              <li className="flex items-start gap-2">
-                <span className="text-terracotta mt-1">→</span>
-                Detecting harmful content (e.g. cross prompt injections) in multimodal inputs and outputs
-              </li>
-            </ul>
+            <h3 className="font-serif text-2xl mb-4">Where It Started</h3>
+            <p className="text-cream/90 leading-relaxed">
+              My path started in computer-vision research at Cornell, then took me into Microsoft&apos;s AI Development Acceleration Program. When generative AI took off in 2022, I became one of the first leads on Microsoft&apos;s internal Responsible AI review process, running architecture reviews, harm analyses, and red-teaming across global product launches. That work taught me that spotting a harmful output is easy; tracing it back through the research, architecture, and product decisions that produced it is not &mdash; and that gap is what pulled me toward anticipating and mitigating novel AI risks.
+            </p>
           </div>
         </motion.div>
       </div>
