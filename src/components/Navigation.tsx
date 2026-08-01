@@ -4,12 +4,13 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { name: "About", href: "#about" },
-  { name: "Experience", href: "#experience" },
-  { name: "Research", href: "#research" },
-  { name: "Expertise", href: "#expertise" },
-  // { name: "For Fun", href: "#forfun" }, 
-  { name: "Connect", href: "#connect" },
+  { name: "About", href: "/#about" },
+  { name: "Experience", href: "/#experience" },
+  { name: "Research", href: "/#research" },
+  { name: "Expertise", href: "/#expertise" },
+  // { name: "For Fun", href: "/#forfun" },
+  { name: "Consulting", href: "/consulting" },
+  { name: "Connect", href: "/#connect" },
 ];
 
 export default function Navigation() {
@@ -40,7 +41,7 @@ export default function Navigation() {
           <div className="flex items-center justify-between">
             {/* Logo / Name */}
             <motion.a
-              href="#"
+              href="/"
               className="text-olive font-serif text-xl tracking-wide"
               whileHover={{ scale: 1.02 }}
             >
