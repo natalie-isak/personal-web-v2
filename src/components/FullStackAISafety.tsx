@@ -29,7 +29,7 @@ const LAYERS: Layer[] = [
     ],
     valueTitle: "Research that reaches production",
     valueBody:
-      "Using AI for safety and security isn't about doing the same things faster — it's about thinking differently and creatively, scaling and deploying in smarter ways to keep pace with everything moving against us.",
+      "Using AI for safety and security isn't about doing the same things faster; it's about thinking differently and creatively, scaling and deploying in smarter ways to keep pace with everything moving against us.",
   },
   {
     title: "Red Teaming & Adversarial",

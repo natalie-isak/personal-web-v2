@@ -11,7 +11,7 @@ const experiences = [
     company: "Microsoft AI Safety",
     location: "New York, NY",
     highlights: [
-      "Developed and evaluated detections for frontier AI risks—agentic memory poisoning, psychosocial harms, multi-session malware campaigns—using agents, fine-tuning, and heuristics.",
+      "Developed and evaluated detections for frontier AI risks (agentic memory poisoning, psychosocial harms, multi-session malware campaigns) using agents, fine-tuning, and heuristics.",
       "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across products; built the production architecture and co-authored the paper and patent filing.",
       "Architected, built, and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly with privacy-preserving, retroactive detection across compliance boundaries."
     ],
