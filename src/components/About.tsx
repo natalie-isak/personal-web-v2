@@ -80,11 +80,11 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              With 5+ years of hands-on expertise across product and research, I do my best work iterating quickly on the edge. My current focus is AI safety and security: detecting the full spectrum of novel AI risks, from agentic memory poisoning to psychosocial risk factors to AI-assisted cyber uplift.
+              With 5+ years of hands-on expertise across product and research, I do my best work iterating quickly on the edge. My current focus is AI safety and security: detecting the full spectrum of novel AI risks, from agentic memory poisoning to psychosocial risk factors to AI-assisted cyber uplift. A lot of my focus centers on balancing safety and security with privacy.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              I&apos;m a published author and patent holder several times over in the AI safety space, with a research background spanning both academia and industry, including an incoming MSt in Applied Ethics at Oxford University. I&apos;m energized by translating frontier research into practical safeguards that help teams ship AI responsibly, and have presented my work at leading venues including SaTML, Women Impact Tech NYC, and [un]prompted.
+              I&apos;m a published author and patent holder several times over in the AI safety space, with a research background spanning both academia and industry, and I&apos;m beginning a Masters in Applied Ethics at Oxford University. I&apos;m energized by translating frontier research into practical safeguards that help teams ship AI responsibly, and have presented my work at leading venues including SaTML, Women Impact Tech NYC, and [un]prompted.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
@@ -102,12 +102,21 @@ export default function About() {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="mt-16 max-w-2xl mx-auto"
+          className="mt-16"
         >
           <div className="p-8 bg-olive text-cream rounded-3xl shadow-lg">
             <h3 className="font-serif text-2xl mb-4">Where It Started</h3>
             <p className="text-cream/90 leading-relaxed">
-              My path started in computer-vision research at Cornell, then took me into Microsoft&apos;s AI Development Acceleration Program. When generative AI took off in 2022, I became one of the first leads on Microsoft&apos;s internal Responsible AI review process, running architecture reviews, harm analyses, and red-teaming across global product launches. That work taught me that spotting a harmful output is easy; tracing it back through the research, architecture, and product decisions that produced it is not &mdash; and that gap is what pulled me toward anticipating and mitigating novel AI risks.
+              I&apos;ve always been interested in hard problems and helping others. I studied at Cornell University, where I worked on using vision models to create safer drinking water, formal verification to create more secure programming languages, and techniques to mitigate algorithmic bias. After graduating, I was selected for Microsoft&apos;s AI Development Acceleration Program (
+              <a
+                href="https://microsoftnewengland.com/maidap/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="underline underline-offset-2 hover:text-terracotta transition-colors"
+              >
+                MAIDAP
+              </a>
+              ). When generative AI took off in 2022, I became one of the first leads on Microsoft&apos;s internal Responsible AI review process, running architecture reviews, harm analyses, and red-teaming across dozens of global product launches. That work showed me that spotting a harmful output is easy, but tracing it back through the research, architecture, and product decisions behind it is not. Closing that gap is what pulled me toward anticipating and mitigating the novel risks of increasingly capable AI.
             </p>
           </div>
         </motion.div>
