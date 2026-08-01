@@ -11,14 +11,9 @@ const experiences = [
     company: "Microsoft AI Safety",
     location: "New York, NY",
     highlights: [
-      "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries; co-authored the paper and drove a patent filing.",
-      "Built detections for novel AI risks—agentic memory poisoning, psychosocial harms, multi-session malware campaigns—using agents, fine-tuning, and heuristics.",
-      "Architected and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly.",
-      "Led a “write once, run everywhere” detection framework across compliance boundaries, cutting detection-authoring time by 67%.",
-      "Led the first AI-powered scan of M365 telemetry during a live security incident, analyzing 90M+ logs with 99.84% offline accuracy.",
-      "Defined new observability requirements for AI capabilities across Microsoft AI’s product portfolio.",
-      "Drove the cross-company design integrating AI safety detections into Microsoft Defender and Sentinel.",
-      "Mentored junior engineers and interns."
+      "Developed and evaluated detections for frontier AI risks—agentic memory poisoning, psychosocial harms, multi-session malware campaigns—using agents, fine-tuning, and heuristics.",
+      "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across products; built the production architecture and co-authored the paper and patent filing.",
+      "Architected, built, and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly with privacy-preserving, retroactive detection across compliance boundaries."
     ],
     featured: true,
   },
@@ -28,13 +23,10 @@ const experiences = [
     company: "Microsoft AI Development Acceleration Program",
     location: "Cambridge, MA",
     highlights: [
-      "Architected an AI data entry agent with >200K MAU, improving latency by 90.72% and saving ~$300K CAD annually.",
-      "Architected backend contracts for tenant-level fine-tuning of enterprise agents, aligning interfaces across Copilot Studio and M365 and leading end-to-end security reviews.",
-      "Led technical Responsible AI reviews for dozens of product launches, translating safety risks into measurable release criteria.",
-      "Developed the open-source Semantic Kernel agentic framework (3 independent patents).",
-      "Built a RAG-based M365 Chat plugin projected to deflect up to 80% of an HR support queue, with end-to-end Responsible AI evaluations.",
-      "Added full-stack object detection support to the RAI Dashboard, released at Microsoft Build.",
-      "Built a new ML pipeline for a Smart News feed using AI Builder, saving 6 weeks of onboarding time per customer."
+      "Delivered 3 flagship enterprise AI products from architecture to launch: owned backend contracts and security for M365 Copilot Tuning's tenant-level fine-tuning; designed retrieval and Responsible AI evaluations for a RAG-based M365 Chat plugin projected to deflect up to 80% of HR support volume; and shipped an AI data entry agent reaching 200K+ MAU, cutting latency 90.72% and saving one client ~$300K CAD/year.",
+      "Led technical Responsible AI reviews for 20+ product launches, translating safety risks into measurable release criteria and production mitigations.",
+      "Contributed new capabilities to Microsoft's open-source Semantic Kernel agent framework and co-invented three patented techniques for agent behavior and artifact construction.",
+      "Added full-stack support for an object-detection interpretability feature, released at Microsoft Build and estimated to cut development time by >50%."
     ],
     featured: false,
   },
