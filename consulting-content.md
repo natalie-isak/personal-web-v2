@@ -4,7 +4,7 @@
 
 I'm a Machine Learning Engineer working in AI safety, focused on measuring and mitigating the risks that come with increasingly capable AI systems. My background spans computer science research at Cornell and applied AI work at Microsoft, where I've led dozens of product releases through the company's internal Responsible AI review board, running architecture reviews, harm analyses, and adversarial testing.
 
-I'm a published author and patent holder six times over in the AI safety space, with a research background spanning both academia and industry, including an incoming MSt in Applied Ethics at Oxford University. I've presented my work at venues including SaTML, Women Impact Tech NYC, and [un]prompted, and have given talks on domain-specific AI risks to audiences ranging from healthcare experts to Chief Information Security Officers.
+I'm a published author and patent holder six times over in the AI safety space, with a research background spanning both academia and industry, including an upcoming Masters in Applied Ethics at Oxford University. I've presented my work at academic conferences (such as the IEEE Conference on Secure and Trustworthy Machine Learning, or SaTML), inclusion conferences (Women Impact Tech NYC), and security conferences ([un]prompted), along with domain-specific talks on AI risk to audiences ranging from healthcare experts to Chief Information Security Officers.
 
 ## How I can help
 
