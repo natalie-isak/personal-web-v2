@@ -16,7 +16,7 @@ const LAYERS: Layer[] = [
     title: "Research",
     points: [
       "Co-invented BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across compliance boundaries. Patented and peer-reviewed at IEEE SaTML '26.",
-      "Created models and evaluations for risks with little prior art: agentic memory poisoning, psychosocial harms, multi-session malware campaigns.",
+      "Created detection and evaluation systems (e.g. fine-tuned models) for risks with little prior art: agentic memory poisoning, psychosocial harms, multi-session malware campaigns.",
     ],
     valueTitle: "Methods ahead of the literature",
     valueBody: "I can innovate creatively, then filter the ideas down to what I know will work.",
@@ -24,37 +24,36 @@ const LAYERS: Layer[] = [
   {
     title: "Engineering",
     points: [
-      "Architected, built, and scaled a 0-to-1 AI safety detection platform across 60+ Microsoft services, processing 26.8B log lines monthly with privacy-preserving, retroactive detection across compliance boundaries.",
-      "Designed a write once, run everywhere abstraction: one detector serves 60+ products, reducing detection-authoring time by 67%.",
+      "Architected, built, and scaled a 0-to-1 AI safety detection platform across 60+ Microsoft services, processing 26.8B log lines monthly with privacy-preserving detection capabilities across products.",
+      "Designed a write once, run everywhere framework: one detector serves 60+ products, reducing detection-authoring time by 67%.",
     ],
     valueTitle: "Research that reaches production",
-    valueBody: "I built the platform to solve my own need as a researcher.",
+    valueBody:
+      "Using AI for safety and security isn't about doing the same things faster — it's about thinking differently and creatively, scaling and deploying in smarter ways to keep pace with everything moving against us.",
   },
   {
     title: "Red Teaming & Adversarial",
     points: [
-      "Led complex AI red-teaming operations spanning everything from multilingual to malware generation.",
-      "Devised novel techniques for poisoning agentic memory and manipulating agents, then presented the risks and mitigations to CISOs and senior government security officials.",
+      "Led complex AI red-teaming operations spanning everything from multilingual consistent behavior to malware generation.",
     ],
     valueTitle: "Coverage beyond known attacks",
     valueBody:
-      "Red-team findings feed directly into the detections I build, so each discovered failure mode becomes a monitored one.",
+      "The weaknesses I uncover as an attacker shape what I go on to defend against.",
   },
   {
     title: "Policy & Governance",
     points: [
       "Nominated by my mentor in 2023 to become one of the company's first internal Responsible AI leads, before playbooks existed and before many of these risks had standard names.",
-      "Championed flagship AI products from idea through deployment, translating safety risks into measurable release criteria and production mitigations.",
-      "Built risk-harm taxonomies, defined applicable policy, and led red-teaming operations for dozens of product launches.",
-      "Owned the observability schema for AI memory safety, socializing the design and aligning stakeholders across MAI, M365, and Foundry to enable auditability, attribution, and detection at scale. Delivered direct product on memory observability via Security Development Lifecycle adoption, extending these best practices into Microsoft's company-wide security enforcement standard.",
+      "Championed dozens of flagship AI products from idea through deployment, translating safety risks into measurable release criteria and production mitigations.",
+      "Owned the observability schema for AI memory safety, delivering these best practices into Microsoft's company-wide security enforcement standard.",
     ],
     valueTitle: "Governance in unmapped territory",
     valueBody:
-      "I have written the release criteria from scratch for loosely defined risks, and implemented it in practice.",
+      "When the risks are still loosely defined, I write the release criteria from scratch and put them into practice.",
   },
   {
     title: "Applied Ethics",
-    points: ["Beginning MSt in Applied Ethics at Oxford in 2026. More coming soon!"],
+    points: ["Beginning a Masters in Applied Ethics at Oxford in 2026. More coming soon!"],
     valueTitle: "Formal grounding",
     valueBody: "Building out a more rigorous theoretical foundation for my work.",
   },

@@ -156,9 +156,6 @@ export default function Expertise() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-olive mt-4">
             Expertise
           </h2>
-          <p className="text-olive/70 mt-4 max-w-2xl mx-auto text-lg">
-            Specialized in building safe, scalable AI systems with a deep understanding of responsible AI practices.
-          </p>
         </motion.div>
 
         {/* Tools & Technologies */}

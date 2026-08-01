@@ -80,11 +80,11 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              With 5+ years of hands-on expertise across product and research, I do my best work iterating quickly on the edge. My current focus is AI safety and security: detecting the full spectrum of novel AI risks, from agentic memory poisoning to psychosocial risk factors to AI-assisted cyber uplift.
+              With 5+ years of hands-on expertise across product and research, I do my best work iterating quickly on the edge. My current focus is AI safety and security: detecting the full spectrum of novel AI risks, from agentic memory poisoning to psychosocial risk factors to AI-assisted cyber uplift. A lot of my work centers on balancing safety and security with privacy.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              I&apos;m a published author and patent holder several times over in the AI safety space, with a research background spanning both academia and industry, including an incoming MSt in Applied Ethics at Oxford University. I&apos;m energized by translating frontier research into practical safeguards that help teams ship AI responsibly, and have presented my work at leading venues including SaTML, Women Impact Tech NYC, and [un]prompted.
+              I&apos;m a published author and patent holder several times over in the AI safety space, with a research background spanning both academia and industry, as I begin a Masters in Applied Ethics at Oxford University. I&apos;m energized by translating frontier research into practical safeguards that help teams ship AI responsibly, and have presented my work at leading venues including SaTML, Women Impact Tech NYC, and [un]prompted.
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
@@ -107,7 +107,7 @@ export default function About() {
           <div className="p-8 bg-olive text-cream rounded-3xl shadow-lg">
             <h3 className="font-serif text-2xl mb-4">Where It Started</h3>
             <p className="text-cream/90 leading-relaxed">
-              My path started in computer-vision research at Cornell, then took me into Microsoft&apos;s AI Development Acceleration Program. When generative AI took off in 2022, I became one of the first leads on Microsoft&apos;s internal Responsible AI review process, running architecture reviews, harm analyses, and red-teaming across global product launches. That work taught me that spotting a harmful output is easy; tracing it back through the research, architecture, and product decisions that produced it is not &mdash; and that gap is what pulled me toward anticipating and mitigating novel AI risks.
+              I started out studying at Cornell University, where I got hooked on the many faces of AI &mdash; exploring algorithmic bias and working across everything from computer vision to formal verification. That curiosity led me to be selected for Microsoft&apos;s AI Development Acceleration Program (MAIDAP), a competitive rotation where I built real products alongside world-class engineers. Then generative AI took off in 2022, and everything changed. I became one of the first leads on Microsoft&apos;s internal Responsible AI review process &mdash; before the playbooks existed &mdash; running architecture reviews, harm analyses, and red-teaming across global product launches. That work taught me something that still drives me: spotting a harmful output is easy, but tracing it back through the research, architecture, and product decisions that produced it is hard. Closing that gap is what pulled me toward anticipating and mitigating the novel risks that come with increasingly capable AI.
             </p>
           </div>
         </motion.div>

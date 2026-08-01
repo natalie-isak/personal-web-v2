@@ -214,15 +214,11 @@ export default function Research() {
           initial="initial"
           animate={isInView ? "animate" : "initial"}
           variants={fadeInUp}
-          className="grid grid-cols-1 sm:grid-cols-3 gap-8 max-w-2xl mx-auto mb-16"
+          className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-xl mx-auto mb-16"
         >
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
-            <div className="text-4xl font-serif text-terracotta">4</div>
-            <div className="text-sm text-olive/70 mt-1">Patents</div>
-          </div>
-          <div className="text-center p-6 bg-cream/70 rounded-2xl">
-            <div className="text-4xl font-serif text-terracotta">2</div>
-            <div className="text-sm text-olive/70 mt-1">Publications</div>
+            <div className="text-4xl font-serif text-terracotta">6</div>
+            <div className="text-sm text-olive/70 mt-1">Patents &amp; Peer-Reviewed Publications</div>
           </div>
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
             <div className="text-4xl font-serif text-terracotta">+3K</div>
@@ -378,7 +374,7 @@ export default function Research() {
               <h3 className="text-3xl lg:text-4xl font-serif text-cream mt-4 mb-6">
                 BinaryShield: Privacy-Preserving Threat Detection
               </h3>
-              <p className="text-cream/80 leading-relaxed mb-6">
+              <p className="text-cream leading-relaxed mb-6 text-[1.0625rem]">
                 When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
               </p>
               <div className="flex flex-wrap gap-3">

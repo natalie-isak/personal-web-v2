@@ -97,8 +97,8 @@ export default function Introduction() {
               className="mt-12 pt-8 border-t border-sage/30 grid grid-cols-3 gap-8"
             >
               <div>
-                <div className="text-3xl font-serif text-terracotta">4</div>
-                <div className="text-sm text-olive/70 mt-1">Patents</div>
+                <div className="text-3xl font-serif text-terracotta">6</div>
+                <div className="text-sm text-olive/70 mt-1">Patents &amp; Peer-Reviewed Publications</div>
               </div>
               <div>
                 <div className="text-3xl font-serif text-terracotta">70+</div>
