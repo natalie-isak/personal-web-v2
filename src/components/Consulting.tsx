@@ -26,8 +26,21 @@ const services = [
   {
     title: "AI safety 101",
     question: null,
-    description:
-      "What AI safety is, and what it means for your field. I've broken down AI risk for healthcare experts, Chief Information Security Officers, and both technical and non-technical audiences, always grounded in the risks that actually matter for their domain. Useful for teams getting up to speed, leadership getting oriented, or events that need a speaker.",
+    description: (
+      <>
+        What AI safety is, and what it means for your field. I&apos;ve broken down AI risk for{" "}
+        <a
+          href="https://womenasone.org/for-physicians/climb/climb-2026/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-terracotta hover:text-olive underline transition-colors"
+        >
+          healthcare experts
+        </a>
+        , Chief Information Security Officers, and both technical and non-technical audiences, always
+        grounded in the risks that actually matter for their domain.
+      </>
+    ),
   },
 ];
 
@@ -84,10 +97,18 @@ function Intro() {
             I&apos;m a published author and patent holder six times over in the AI safety space, with a
             research background spanning both academia and industry, including an upcoming Masters in
             Applied Ethics at Oxford University. I&apos;ve presented my work at academic conferences
-            (such as the IEEE Conference on Secure and Trustworthy Machine Learning, or SaTML),
-            inclusion conferences (Women Impact Tech NYC), and security conferences ([un]prompted),
-            along with domain-specific talks on AI risk to audiences ranging from healthcare experts to
-            Chief Information Security Officers.
+            (e.g. IEEE Conference on Secure and Trustworthy Machine Learning, or SaTML), inclusion
+            conferences (e.g. Women Impact Tech NYC), and security conferences (e.g.{" "}
+            <a
+              href="https://www.youtube.com/watch?v=u7pag5p9z5o&list=PLjmt1tu85IhAiVPugOjP-7Cy0Oemi3m7z&index=9"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-terracotta hover:text-olive underline transition-colors"
+            >
+              [un]prompted
+            </a>
+            ), along with domain-specific talks on AI risk to audiences ranging from healthcare experts
+            to Chief Information Security Officers.
           </motion.p>
         </motion.div>
       </div>
@@ -140,10 +161,6 @@ function HowICanHelp() {
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-serif text-olive mt-4">
             How I can help
           </h2>
-          <p className="text-olive/70 mt-4 max-w-2xl mx-auto text-lg">
-            Whether you&apos;re preparing to launch or already live and running into problems, here&apos;s
-            where I tend to come in.
-          </p>
         </motion.div>
 
         <motion.div
@@ -243,6 +260,28 @@ function MentoringAndVolunteering() {
               </p>
             </div>
           </motion.div>
+        </motion.div>
+
+        {/* Get in touch */}
+        <motion.div
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          variants={fadeInUp}
+          className="text-center mt-16"
+        >
+          <span className="text-terracotta text-sm tracking-[0.3em] uppercase font-medium">
+            Get in touch
+          </span>
+          <p className="text-olive/80 text-lg mt-4">
+            Interested in working together? Reach out at{" "}
+            <a
+              href="mailto:natalie.isak@gmail.com"
+              className="text-terracotta hover:text-olive underline transition-colors"
+            >
+              natalie [dot] isak [at] gmail [dot] com
+            </a>
+            .
+          </p>
         </motion.div>
       </div>
 
