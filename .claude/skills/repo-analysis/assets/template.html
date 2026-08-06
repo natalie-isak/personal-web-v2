@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- PLACEHOLDER:TITLE --><title>Repo Analysis</title>
+<style>
+  :root {
+    --bg: #0f1115; --panel: #171a21; --panel-2: #1e222b; --border: #2a2f3a;
+    --text: #e6e8ec; --muted: #9aa3b2; --accent: #6ea8fe; --accent-soft: #22304a;
+    --crit: #ff6b6b; --high: #ffa94d; --med: #ffd43b; --low: #63e6be;
+    --crit-bg: #3a1d20; --high-bg: #3a2c1a; --med-bg: #3a361a; --low-bg: #16332c;
+  }
+  @media (prefers-color-scheme: light) {
+    :root {
+      --bg: #f6f7f9; --panel: #ffffff; --panel-2: #f0f2f5; --border: #e2e5ea;
+      --text: #1a1d23; --muted: #5b6472; --accent: #2563eb; --accent-soft: #dbe6ff;
+      --crit-bg: #fdeaea; --high-bg: #fdf3e6; --med-bg: #fbf8e4; --low-bg: #e6f7f1;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0; background: var(--bg); color: var(--text);
+    font: 16px/1.6 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  .wrap { max-width: 960px; margin: 0 auto; padding: 40px 24px 80px; }
+  header { border-bottom: 1px solid var(--border); padding-bottom: 20px; margin-bottom: 32px; }
+  h1 { font-size: 28px; margin: 0 0 6px; letter-spacing: -0.02em; }
+  .meta { color: var(--muted); font-size: 14px; }
+  h2 {
+    font-size: 20px; margin: 40px 0 14px; letter-spacing: -0.01em;
+    display: flex; align-items: center; gap: 10px;
+  }
+  h2 .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--accent); }
+  .panel {
+    background: var(--panel); border: 1px solid var(--border);
+    border-radius: 12px; padding: 22px 24px;
+  }
+  .summary { font-size: 17px; line-height: 1.7; }
+  .diagram { overflow-x: auto; text-align: center; }
+  .diagram pre.mermaid { margin: 0; }
+  .diagram .fallback {
+    display: none; text-align: left; white-space: pre; font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size: 13px; color: var(--muted); background: var(--panel-2);
+    padding: 16px; border-radius: 8px; overflow-x: auto;
+  }
+  .finding {
+    border: 1px solid var(--border); border-left-width: 4px; border-radius: 10px;
+    padding: 16px 18px; margin: 12px 0; background: var(--panel);
+  }
+  .finding .top { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; margin-bottom: 6px; }
+  .finding h3 { font-size: 16px; margin: 0; }
+  .badge {
+    font-size: 11px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em;
+    padding: 3px 8px; border-radius: 999px;
+  }
+  .loc {
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: 13px;
+    color: var(--muted); background: var(--panel-2); padding: 2px 7px; border-radius: 6px;
+  }
+  .finding p { margin: 8px 0 0; }
+  .finding .fix { margin-top: 10px; font-size: 14px; }
+  .finding .fix b { color: var(--accent); }
+  .sev-critical { border-left-color: var(--crit); }
+  .sev-critical .badge { background: var(--crit-bg); color: var(--crit); }
+  .sev-high { border-left-color: var(--high); }
+  .sev-high .badge { background: var(--high-bg); color: var(--high); }
+  .sev-medium { border-left-color: var(--med); }
+  .sev-medium .badge { background: var(--med-bg); color: var(--med); }
+  .sev-low { border-left-color: var(--low); }
+  .sev-low .badge { background: var(--low-bg); color: var(--low); }
+  .cat { margin-top: 26px; }
+  .cat > h3 { font-size: 15px; color: var(--muted); text-transform: uppercase; letter-spacing: 0.06em; margin: 0 0 4px; }
+  .empty { color: var(--muted); font-style: italic; }
+  footer { margin-top: 48px; color: var(--muted); font-size: 13px; text-align: center; }
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <!-- PLACEHOLDER:H1 --><h1>Repo Analysis: <em>repo-name</em></h1>
+    <!-- PLACEHOLDER:META --><div class="meta">Generated 2026-01-01 · N files scanned</div>
+  </header>
+
+  <section>
+    <h2><span class="dot"></span>Executive Summary</h2>
+    <div class="panel summary">
+      <!-- PLACEHOLDER:SUMMARY -->
+      One-paragraph summary of what the project is, who it's for, the core
+      stack, and its overall shape and maturity.
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Architecture</h2>
+    <div class="panel diagram">
+      <!-- PLACEHOLDER:MERMAID: replace the contents of the <pre> with the Mermaid source,
+           and mirror it in the .fallback block so it's readable if the CDN can't load. -->
+      <pre class="mermaid">
+graph LR
+  A[Browser] -->|HTTP| B["Next.js App"]
+  B --> C["API Routes"]
+  C -->|query| D[(Database)]
+      </pre>
+      <pre class="fallback">graph LR
+  A[Browser] --> B[Next.js App] --> C[API Routes] --> D[Database]</pre>
+    </div>
+  </section>
+
+  <section>
+    <h2><span class="dot"></span>Needs Attention</h2>
+
+    <!-- PLACEHOLDER:FINDINGS
+      For each category (Security / Bugs / Design), emit a .cat block.
+      Inside, one .finding per issue, ordered by severity. Set the severity
+      class on the .finding AND matching text in the .badge. Use the empty
+      note only when a category truly has nothing to report.
+      Card template:
+
+      <div class="finding sev-high">
+        <div class="top">
+          <span class="badge">High</span>
+          <h3>Finding title</h3>
+          <span class="loc">src/path/file.ts:42</span>
+        </div>
+        <p>What the risk is, in one or two sentences.</p>
+        <div class="fix"><b>Fix:</b> concrete recommendation.</div>
+      </div>
+    -->
+
+    <div class="cat">
+      <h3>Security</h3>
+      <div class="finding sev-critical">
+        <div class="top">
+          <span class="badge">Critical</span>
+          <h3>Example finding — replace me</h3>
+          <span class="loc">path/to/file:1</span>
+        </div>
+        <p>Describe the concrete risk.</p>
+        <div class="fix"><b>Fix:</b> what to do about it.</div>
+      </div>
+    </div>
+
+    <div class="cat">
+      <h3>Bugs &amp; Correctness</h3>
+      <p class="empty">No notable issues found.</p>
+    </div>
+
+    <div class="cat">
+      <h3>Design &amp; Maintainability</h3>
+      <p class="empty">No notable issues found.</p>
+    </div>
+  </section>
+
+  <footer>Generated by the repo-analysis skill · findings reflect a point-in-time review and warrant human verification.</footer>
+</div>
+
+<script>
+  // Render the Mermaid diagram; if the library can't load (e.g. offline),
+  // reveal the plain-text fallback so the architecture is still readable.
+  (function () {
+    var done = false;
+    function showFallback() {
+      if (done) return;
+      document.querySelectorAll('.diagram .mermaid').forEach(function (el) { el.style.display = 'none'; });
+      document.querySelectorAll('.diagram .fallback').forEach(function (el) { el.style.display = 'block'; });
+    }
+    var s = document.createElement('script');
+    s.src = 'https://cdn.jsdelivr.net/npm/mermaid@11/dist/mermaid.min.js';
+    s.onload = function () {
+      done = true;
+      try {
+        var dark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
+        mermaid.initialize({ startOnLoad: true, theme: dark ? 'dark' : 'default' });
+      } catch (e) { showFallback(); }
+    };
+    s.onerror = showFallback;
+    document.head.appendChild(s);
+    setTimeout(showFallback, 4000);
+  })();
+</script>
+</body>
+</html>
