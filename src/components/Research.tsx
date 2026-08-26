@@ -74,7 +74,7 @@ const publications = [
     description: "Research paper on enabling cross-service threat detection in LLM systems while maintaining privacy.",
     icon: "paper",
     hasDemo: true,
-    demoLink: "https://github.com/natalie-isak/BinaryShield",
+    demoLink: "https://github.com/microsoft/BinaryShield",
   },
   {
     type: "Conference Talk",
