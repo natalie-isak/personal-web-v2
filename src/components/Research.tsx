@@ -12,6 +12,24 @@ const publications = [
     icon: "paper",
   },
   {
+    type: "Conference Talk",
+    title: "AI Safety for Healthcare Experts",
+    venue: "Women As One",
+    description: (
+      <>
+        Broke down AI risk and what it means for healthcare, for an audience of physicians.
+        <a
+          href="https://www.youtube.com/watch?v=NpFXGt0jmH8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Watch here
+        </a>.
+      </>
+    ),
+    icon: "talk",
+  },
+  {
     type: "Blog",
     title: "Guarding AI memory",
     date: "June 2026",
