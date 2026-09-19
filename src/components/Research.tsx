@@ -6,6 +6,12 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const publications = [
   {
+    type: "Publication",
+    title: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7477058">Enterprise LLM Deployment Readiness: A Practitioner Framework across Six Pillars</a>,
+    description: "A practitioner framework for assessing enterprise readiness to deploy large language models across six pillars.",
+    icon: "paper",
+  },
+  {
     type: "Blog",
     title: "Guarding AI memory",
     date: "June 2026",

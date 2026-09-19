@@ -36,8 +36,17 @@ const services = [
           className="text-terracotta hover:text-olive underline transition-colors"
         >
           healthcare experts
+        </a>{" "}
+        (
+        <a
+          href="https://www.youtube.com/watch?v=NpFXGt0jmH8"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-terracotta hover:text-olive underline transition-colors"
+        >
+          watch
         </a>
-        , Chief Information Security Officers, and both technical and non-technical audiences, always
+        ), Chief Information Security Officers, and both technical and non-technical audiences, always
         grounded in the risks that actually matter for their domain.
       </>
     ),
