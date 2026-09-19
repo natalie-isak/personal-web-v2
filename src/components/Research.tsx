@@ -6,6 +6,30 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const publications = [
   {
+    type: "Publication",
+    title: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7477058">Enterprise LLM Deployment Readiness: A Practitioner Framework across Six Pillars</a>,
+    description: "A practitioner framework for assessing enterprise readiness to deploy large language models across six pillars.",
+    icon: "paper",
+  },
+  {
+    type: "Conference Talk",
+    title: "AI Safety for Healthcare Experts",
+    venue: "Women As One",
+    description: (
+      <>
+        Broke down AI risk and what it means for healthcare, for an audience of physicians.
+        <a
+          href="https://www.youtube.com/watch?v=NpFXGt0jmH8"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          {" "}Watch here
+        </a>.
+      </>
+    ),
+    icon: "talk",
+  },
+  {
     type: "Blog",
     title: "Guarding AI memory",
     date: "June 2026",
