@@ -12,7 +12,7 @@ const navItems = [
   { name: "Connect", href: "/connect" },
 ];
 
-export default function Navigation() {
+export default function Navigation({ dark = false }: { dark?: boolean }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -32,7 +32,7 @@ export default function Navigation() {
         transition={{ duration: 0.8, ease: [0.6, -0.05, 0.01, 0.99] }}
         className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
           isScrolled
-            ? "bg-cream/90 backdrop-blur-md shadow-sm py-4"
+            ? `${dark ? "bg-olive/90" : "bg-cream/90"} backdrop-blur-md shadow-sm py-4`
             : "bg-transparent py-6"
         }`}
       >
@@ -41,7 +41,7 @@ export default function Navigation() {
             {/* Logo / Name */}
             <motion.a
               href="/"
-              className="text-olive font-serif text-xl tracking-wide"
+              className={`${dark ? "text-cream" : "text-olive"} font-serif text-xl tracking-wide`}
               whileHover={{ scale: 1.02 }}
             >
               Natalie Isak
@@ -53,7 +53,7 @@ export default function Navigation() {
                 <motion.a
                   key={item.name}
                   href={item.href}
-                  className="text-olive/80 hover:text-terracotta text-sm tracking-wide uppercase transition-colors duration-300"
+                  className={`${dark ? "text-cream/80" : "text-olive/80"} hover:text-terracotta text-sm tracking-wide uppercase transition-colors duration-300`}
                   initial={{ opacity: 0, y: -20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: index * 0.1 + 0.3 }}
@@ -73,15 +73,15 @@ export default function Navigation() {
               <div className="flex flex-col items-center justify-center gap-1.5">
                 <motion.span
                   animate={isMobileMenuOpen ? { rotate: 45, y: 6 } : { rotate: 0, y: 0 }}
-                  className="w-6 h-0.5 bg-olive block transition-transform"
+                  className={`w-6 h-0.5 ${dark ? "bg-cream" : "bg-olive"} block transition-transform`}
                 />
                 <motion.span
                   animate={isMobileMenuOpen ? { opacity: 0 } : { opacity: 1 }}
-                  className="w-6 h-0.5 bg-olive block"
+                  className={`w-6 h-0.5 ${dark ? "bg-cream" : "bg-olive"} block`}
                 />
                 <motion.span
                   animate={isMobileMenuOpen ? { rotate: -45, y: -6 } : { rotate: 0, y: 0 }}
-                  className="w-6 h-0.5 bg-olive block transition-transform"
+                  className={`w-6 h-0.5 ${dark ? "bg-cream" : "bg-olive"} block transition-transform`}
                 />
               </div>
             </button>
@@ -97,7 +97,7 @@ export default function Navigation() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -20 }}
             transition={{ duration: 0.3 }}
-            className="fixed inset-0 z-40 bg-cream pt-24 px-6 md:hidden"
+            className={`fixed inset-0 z-40 ${dark ? "bg-olive" : "bg-cream"} pt-24 px-6 md:hidden`}
           >
             <div className="flex flex-col space-y-6">
               {navItems.map((item, index) => (
@@ -105,7 +105,7 @@ export default function Navigation() {
                   key={item.name}
                   href={item.href}
                   onClick={() => setIsMobileMenuOpen(false)}
-                  className="text-olive text-2xl font-serif tracking-wide"
+                  className={`${dark ? "text-cream" : "text-olive"} text-2xl font-serif tracking-wide`}
                   initial={{ opacity: 0, x: -20 }}
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}

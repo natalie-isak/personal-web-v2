@@ -10,9 +10,13 @@ export const metadata: Metadata = {
 
 export default function ConnectPage() {
   return (
-    <main>
-      <Navigation />
-      <Connect />
+    <main className="bg-olive min-h-screen flex flex-col">
+      <Navigation dark />
+      <div className="flex-1 flex items-center">
+        <div className="w-full">
+          <Connect />
+        </div>
+      </div>
       <Footer />
     </main>
   );

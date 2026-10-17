@@ -6,7 +6,7 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const experiences = [
   {
-    period: "2026 – Present",
+    period: "Sept 2026 – Present",
     title: "Senior Researcher",
     company: "Microsoft AI Safety",
     location: "New York, NY",
@@ -16,7 +16,7 @@ const experiences = [
     featured: true,
   },
   {
-    period: "Apr 2025 – Present",
+    period: "Apr 2025 – Aug 2026",
     title: "Machine Learning Engineer II",
     company: "Microsoft AI Safety",
     location: "New York, NY",

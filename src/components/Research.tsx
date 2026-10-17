@@ -257,12 +257,55 @@ export default function Research() {
           className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-xl mx-auto mb-16"
         >
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
-            <div className="text-4xl font-serif text-terracotta">6</div>
+            <div className="text-4xl font-serif text-terracotta">8</div>
             <div className="text-sm text-olive/70 mt-1">Patents &amp; Peer-Reviewed Publications</div>
           </div>
           <div className="text-center p-6 bg-cream/70 rounded-2xl">
             <div className="text-4xl font-serif text-terracotta">+3K</div>
             <div className="text-sm text-olive/70 mt-1">Talk Attendees</div>
+          </div>
+        </motion.div>
+
+        {/* Featured project highlight */}
+        <motion.div
+          initial="initial"
+          animate={isInView ? "animate" : "initial"}
+          variants={fadeInUp}
+          className="mb-16"
+        >
+          <div className="relative p-8 lg:p-12 bg-olive rounded-3xl overflow-hidden">
+            {/* Background pattern */}
+            <div className="absolute inset-0 opacity-10">
+              <div
+                className="w-full h-full"
+                style={{
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
+                }}
+              />
+            </div>
+
+            <div className="relative z-10 max-w-3xl mx-auto">
+              <span className="text-terracotta text-sm tracking-[0.2em] uppercase font-medium">
+                Featured Work
+              </span>
+              <h3 className="text-3xl lg:text-4xl font-serif text-cream mt-4 mb-6">
+                BinaryShield: Privacy-Preserving Threat Detection
+              </h3>
+              <p className="text-cream leading-relaxed mb-6 text-[1.0625rem]">
+                When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
+              </p>
+              <div className="flex flex-wrap gap-3">
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Privacy-Preserving
+                </span>
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Threat Detection
+                </span>
+                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
+                  Cross-Compliance
+                </span>
+              </div>
+            </div>
           </div>
         </motion.div>
 
@@ -387,49 +430,6 @@ export default function Research() {
               </motion.div>
             </motion.div>
           ))}
-        </motion.div>
-
-        {/* Featured project highlight */}
-        <motion.div
-          initial="initial"
-          animate={isInView ? "animate" : "initial"}
-          variants={fadeInUp}
-          className="mt-16"
-        >
-          <div className="relative p-8 lg:p-12 bg-olive rounded-3xl overflow-hidden">
-            {/* Background pattern */}
-            <div className="absolute inset-0 opacity-10">
-              <div
-                className="w-full h-full"
-                style={{
-                  backgroundImage: `url("data:image/svg+xml,%3Csvg width='40' height='40' viewBox='0 0 40 40' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='%23ffffff' fill-opacity='1' fill-rule='evenodd'%3E%3Cpath d='M0 40L40 0H20L0 20M40 40V20L20 40'/%3E%3C/g%3E%3C/svg%3E")`,
-                }}
-              />
-            </div>
-
-            <div className="relative z-10 max-w-3xl mx-auto">
-              <span className="text-terracotta text-sm tracking-[0.2em] uppercase font-medium">
-                Featured Work
-              </span>
-              <h3 className="text-3xl lg:text-4xl font-serif text-cream mt-4 mb-6">
-                BinaryShield: Privacy-Preserving Threat Detection
-              </h3>
-              <p className="text-cream leading-relaxed mb-6 text-[1.0625rem]">
-                When my team faced the challenge of detecting adversarial attacks on AI systems while navigating customer privacy protections, I co-architected and productionized BinaryShield, a technique for cross-compliance boundary searches. This work exemplifies what excites me most: identifying novel AI safety challenges and rapidly generating solutions with real-world impact. This work was patented and peer-reviewed at the IEEE Conference on Secure and Trustworthy Machine Learning.
-              </p>
-              <div className="flex flex-wrap gap-3">
-                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                  Privacy-Preserving
-                </span>
-                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                  Threat Detection
-                </span>
-                <span className="px-4 py-2 bg-cream/10 text-cream rounded-full text-sm">
-                  Cross-Compliance
-                </span>
-              </div>
-            </div>
-          </div>
         </motion.div>
       </div>
 
