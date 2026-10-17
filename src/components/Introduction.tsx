@@ -138,10 +138,10 @@ export default function Introduction() {
               {/* Photo container - smaller on mobile, grows on larger screens */}
               <div className="relative w-64 h-72 sm:w-72 sm:h-80 md:w-80 md:h-96 lg:w-96 lg:h-[28rem] rounded-[1.5rem] md:rounded-[2rem] overflow-hidden shadow-2xl">
                 <Image
-                  src="/images/1569376265769.jpeg"
+                  src="/images/headshot.jpg"
                   alt="Natalie Isak"
                   fill
-                  className="object-cover"
+                  className="object-cover object-[50%_25%]"
                   priority
                 />
               </div>
