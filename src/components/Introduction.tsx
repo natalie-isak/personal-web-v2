@@ -71,7 +71,7 @@ export default function Introduction() {
 
             <motion.div variants={staggerItem} className="flex flex-wrap gap-4">
               <motion.a
-                href="#about"
+                href="/about"
                 className="inline-flex items-center gap-2 bg-olive text-cream px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-terracotta transition-colors duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -82,7 +82,7 @@ export default function Introduction() {
                 </svg>
               </motion.a>
               <motion.a
-                href="#connect"
+                href="/connect"
                 className="inline-flex items-center gap-2 border-2 border-olive text-olive px-8 py-4 rounded-full text-sm tracking-wide uppercase hover:bg-olive hover:text-cream transition-all duration-300"
                 whileHover={{ scale: 1.02 }}
                 whileTap={{ scale: 0.98 }}
@@ -97,7 +97,7 @@ export default function Introduction() {
               className="mt-12 pt-8 border-t border-sage/30 grid grid-cols-3 gap-8"
             >
               <div>
-                <div className="text-3xl font-serif text-terracotta">6</div>
+                <div className="text-3xl font-serif text-terracotta">8</div>
                 <div className="text-sm text-olive/70 mt-1">Patents &amp; Peer-Reviewed Publications</div>
               </div>
               <div>

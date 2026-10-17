@@ -8,7 +8,6 @@ type Layer = {
   title: string;
   points: string[];
   valueTitle: string;
-  valueBody: string;
 };
 
 const LAYERS: Layer[] = [
@@ -19,7 +18,6 @@ const LAYERS: Layer[] = [
       "Created detection and evaluation systems (e.g. fine-tuned models) for risks with little prior art: agentic memory poisoning, psychosocial harms, multi-session malware campaigns.",
     ],
     valueTitle: "Methods ahead of the literature",
-    valueBody: "I can innovate creatively, then filter the ideas down to what I know will work.",
   },
   {
     title: "Engineering",
@@ -28,8 +26,6 @@ const LAYERS: Layer[] = [
       "Designed a write once, run everywhere framework: one detector serves 60+ products, reducing detection-authoring time by 67%.",
     ],
     valueTitle: "Research that reaches production",
-    valueBody:
-      "Using AI for safety and security isn't about doing the same things faster; it's about thinking differently and creatively, scaling and deploying in smarter ways to keep pace with everything moving against us.",
   },
   {
     title: "Red Teaming & Adversarial",
@@ -37,8 +33,6 @@ const LAYERS: Layer[] = [
       "Led complex AI red-teaming operations spanning everything from multilingual consistent behavior to malware generation.",
     ],
     valueTitle: "Coverage beyond known attacks",
-    valueBody:
-      "The weaknesses I uncover as an attacker shape what I go on to defend against.",
   },
   {
     title: "Policy & Governance",
@@ -48,14 +42,11 @@ const LAYERS: Layer[] = [
       "Owned the observability schema for AI memory safety, delivering these best practices into Microsoft's company-wide security enforcement standard.",
     ],
     valueTitle: "Governance in unmapped territory",
-    valueBody:
-      "When the risks are still loosely defined, I write the release criteria from scratch and put them into practice.",
   },
   {
     title: "Applied Ethics",
     points: ["Beginning a Masters in Applied Ethics at Oxford in 2026. More coming soon!"],
     valueTitle: "Formal grounding",
-    valueBody: "Building out a more rigorous theoretical foundation for my work.",
   },
 ];
 
@@ -285,7 +276,7 @@ export default function FullStackAISafety() {
               <h4 className="font-serif text-olive" style={{ fontSize: "clamp(26px, 2.6vw, 36px)", lineHeight: 1.1, margin: "0 0 22px" }}>
                 {layer.valueTitle}
               </h4>
-              <div className="flex flex-col gap-3" style={{ marginBottom: "26px" }}>
+              <div className="flex flex-col gap-3">
                 {layer.points.map((pt, i) => (
                   <div
                     key={i}
@@ -304,25 +295,6 @@ export default function FullStackAISafety() {
                     <span>{pt}</span>
                   </div>
                 ))}
-              </div>
-              <div style={{ borderTop: "2px solid var(--g-300)", paddingTop: "20px" }}>
-                <div
-                  style={{
-                    fontSize: "12.5px",
-                    letterSpacing: "0.22em",
-                    textTransform: "uppercase",
-                    color: "var(--g-800)",
-                    marginBottom: "10px",
-                  }}
-                >
-                  Why it matters
-                </div>
-                <p
-                  className="font-serif"
-                  style={{ fontStyle: "italic", fontSize: "19px", lineHeight: 1.5, margin: 0, color: "var(--n-800)", maxWidth: "30em" }}
-                >
-                  {layer.valueBody}
-                </p>
               </div>
             </div>
           </div>
