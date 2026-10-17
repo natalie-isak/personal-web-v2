@@ -4,13 +4,12 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const navItems = [
-  { name: "About", href: "/#about" },
-  { name: "Experience", href: "/#experience" },
-  { name: "Research", href: "/#research" },
-  { name: "Expertise", href: "/#expertise" },
-  // { name: "For Fun", href: "/#forfun" },
-  { name: "Consulting", href: "/consulting" },
-  { name: "Connect", href: "/#connect" },
+  { name: "About", href: "/about" },
+  { name: "Experience", href: "/experience" },
+  { name: "Research", href: "/research" },
+  // { name: "For Fun", href: "/forfun" },
+  // { name: "Consulting", href: "/consulting" },
+  { name: "Connect", href: "/connect" },
 ];
 
 export default function Navigation() {

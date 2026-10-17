@@ -6,6 +6,16 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 
 const experiences = [
   {
+    period: "2026 – Present",
+    title: "Senior Researcher",
+    company: "Microsoft AI Safety",
+    location: "New York, NY",
+    highlights: [
+      "Focus on model alignment and misalignment for cyber red-teaming use cases, including loss of control risks.",
+    ],
+    featured: true,
+  },
+  {
     period: "Apr 2025 – Present",
     title: "Machine Learning Engineer II",
     company: "Microsoft AI Safety",
@@ -15,7 +25,7 @@ const experiences = [
       "Co-invented and productionized BinaryShield, the first privacy-preserving fingerprinting system for correlating AI threat signals across products; built the production architecture and co-authored the paper and patent filing.",
       "Architected, built, and scaled a 0-to-1 AI safety detection platform across 70+ Microsoft services, processing 26.8B log lines monthly with privacy-preserving, retroactive detection across compliance boundaries."
     ],
-    featured: true,
+    featured: false,
   },
   {
     period: "Jul 2022 – Apr 2025",

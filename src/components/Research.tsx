@@ -7,6 +7,20 @@ import { fadeInUp, staggerContainer, staggerItem } from "@/lib/animations";
 const publications = [
   {
     type: "Publication",
+    title: <a href="https://openreview.net/forum?id=clfjlm6o45" target="_blank" rel="noopener noreferrer">Magnet: Detecting Cross-Session AI Misuse Through Capability Accumulation</a>,
+    venue: "NeurIPS 2026 Workshop (FLMSec)",
+    description: "Accepted to a NeurIPS 2026 workshop.",
+    icon: "paper",
+  },
+  {
+    type: "Publication",
+    title: <a href="https://openreview.net/forum?id=GzLPjlPihJ" target="_blank" rel="noopener noreferrer">Measuring Risk, Not Harm: Detecting Psychological Harm Risk Factors in LLM Conversations</a>,
+    venue: "NeurIPS 2026 Workshop (AI4GOOD)",
+    description: "Accepted to a NeurIPS 2026 workshop.",
+    icon: "paper",
+  },
+  {
+    type: "Publication",
     title: <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=7477058">Enterprise LLM Deployment Readiness: A Practitioner Framework across Six Pillars</a>,
     description: "A practitioner framework for assessing enterprise readiness to deploy large language models across six pillars.",
     icon: "paper",

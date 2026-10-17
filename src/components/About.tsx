@@ -88,10 +88,6 @@ export default function About() {
             </motion.p>
 
             <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
-              I&apos;m also a part-time lead for Microsoft&apos;s company-wide compliance process for Responsible AI in generative AI, where I lead critical efforts in RAI policy implementation, including architecture reviews, harm analyses, red-teaming, and documentation reviews.
-            </motion.p>
-
-            <motion.p variants={staggerItem} className="text-lg text-olive/90 leading-relaxed">
               I&apos;m deeply committed to sharing knowledge and fostering inclusivity in tech. Through initiatives like Girls Who Code and Microsoft TEALs, I mentor women and other underrepresented groups in computer science and AI.
             </motion.p>
           </motion.div>
